@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wapper ol li{
+    margin-top: 10px;
+    list-style: none;
+}
+.wapper span{
+    display: block;
+}
+.wapper .suojin{
+    text-indent: 2em;
+}
+.wapper .suojin3{
+    text-indent: 3em;
+}
+.wapper ol {
+    margin-top: 20px;
+    padding: 0px 10px 10px 10px;
+ 
+    border: 1px solid #ccc;
+    background-color: rgba(240, 238, 240,.5);
+}
+.title{
+    height: 60px;
+    background-color: rgba(240, 238, 240,.5);
+}
+.tit{
+    margin-left: 35%;
+    line-height: 60px;
+}
+.main{
+    margin-top: 20px;
+    width: 800px;
+    margin-left: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.main h2,.main .dom h4{
+    margin-top: 40px;
+}

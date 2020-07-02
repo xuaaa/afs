@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="易购网,家用电器, 手机, 电脑, 笔记本, 数码,百货"/>
+  <meta name="description" content="上易购网手机版，随时随地，尽享购物乐趣！"/>
+  <link rel="icon" href="images/favico.ico" type="image/x-icon" />
+<title>注册新用户</title>
+<link href="css/global.css" type=text/css rel=stylesheet />
+</head>
+
+<body>
+<form action="register.aspx" method="post" name="form1" target="_blank" id="form1">
+  <table width="700" border="1" align="center" cellpadding="3" cellspacing="0" id="table01">
+    <tr>
+      <td width="130" align="right">用户名：*</td>
+      <td width="220"><input name="uname" type="text" id="uname" maxlength="18" />
+      <input type="button" name="btn_check" id="btn_check" value="检测" /></td>
+      <td>&nbsp;请输入6～8个字符，包括字母、数字和下划线</td>
+    </tr>
+    <tr>
+      <td align="right">密　码：*</td>
+      <td><input name="password" type="password" id="password" maxlength="16" /></td>
+      <td>&nbsp;密码由6-16个字符组成，请使用英文字母加数字的组合密码</td>
+    </tr>
+    <tr>
+      <td align="right">再次输入密码：*</td>
+      <td><input name="passwordconfirm" type="text" id="passwordconfirm" maxlength="16" /></td>
+      <td>&nbsp;请再输入一遍您上面输入的密码</td>
+    </tr>
+    <tr>
+      <td align="right">密码保护问题：*</td>
+      <td>
+        <select name="secproblem" id="secproblem">
+          <option value="0" selected="selected">请选择密码提示问题</option>
+          <option value="1">您母亲的姓名是?</option>
+          <option value="2">您父亲的姓名是?</option>
+          <option value="3">您最要好朋友的姓名是?</option>
+          <option value="4">您的出生地是?</option>
+        </select>
+      </td>
+      <td>&nbsp;从下拉列表框中选择一个密码保护问题</td>
+    </tr>
+    <tr>
+      <td align="right">密码保护问题答案：*</td>
+      <td><input name="passwordanswer" type="text" id="passwordanswer" maxlength="30" /></td>
+      <td>&nbsp;输入密码保护问题的答案</td>
+    </tr>
+    <tr>
+      <td align="right">性　别：*</td>
+      <td>
+        <label>
+          <input type="radio" name="sex" value="man" id="sex_0" />男
+        </label>
+           &nbsp;&nbsp;
+        <label>
+          <input type="radio" name="sex" value="woman" id="sex_1" />女
+        </label>
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td align="right">出生日期：*</td>
+      <td><input name="year" type="text" id="year" size="4" maxlength="4" />
+        年
+        <input name="month" type="text" id="month" size="2" maxlength="2" />
+        月
+        <input name="day" type="text" id="day" size="2" maxlength="2" />
+        日</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td align="right">请输入右边的字符：*</td>
+      <td><input name="authcode" type="text" id="authcode" maxlength="16" /></td>
+      <td><label>
+        <input name="vcode_img" type="image" id="vcode_img" src="images/codeImg.gif" alt="字符图像" />
+               看不清楚，换一张</label>
+      </td>
+    </tr>
+    <tr>
+      <td align="right">&nbsp;</td>
+      <td><input name="servitems" type="checkbox" id="servitems" value="true" checked="checked" />
+      <label for="servitems">我已阅读并接受服务条款</label></td>
+      <td><input type="submit" name="create_account" id="create_account" value="创建帐号" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

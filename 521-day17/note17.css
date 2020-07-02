@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+.title{
+    background-color: rgba(240, 238, 240,.5);
+height: 60px;
+}
+.wapper{
+    background-color: rgba(240, 238, 240,.5);
+}
+.tit{
+    line-height: 60px;
+    margin-left: 40%;
+}
+.main{
+    background-color: #fff;
+    padding: 20px;
+    width: 800px;
+    margin-left: 310px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+h2,p,li{
+    margin-top: 20px;
+}
+
+.main ol{
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 50px;
+    margin-left: 30px;
+    background-color: seashell;
+}
+.top1{
+    padding: 20px;
+    border:1px solid #ccc;
+}
+.mian2,.bianlithree,.dom{
+    padding: 20px;
+    margin-top: 80px;
+    border: 1px solid #ccc;
+}
+.dom img{
+    width: 750px;
+}
+

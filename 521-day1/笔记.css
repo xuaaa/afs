@@ -1,0 +1,136 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  background-image: url(背景.jpg);
+}
+#top,.main-wapper a {
+  text-decoration: none;
+  list-style: none;
+  text-emphasis-style: none;
+  color: #f40;
+}
+.wannerp {
+  width: 100%;
+  height: 100%;
+}
+.main-wapper {
+  border: 1px solid #ccc;
+  margin-left: 250px;
+  width: 900px;
+}
+
+/*定位*/
+#top h1 {
+  text-align: center;
+  color: #ff0000;
+}
+.ht {
+  position: fixed;
+  width: 150px;
+  height: 100px;
+  top: 20%;
+  left: 85%;
+  color: #ff2233;
+}
+.ht li {
+  padding: 10px;
+  list-style: none;
+  width: 150px;
+  background-color: #ccc;
+  margin-top: 20px;
+  text-align: center;
+}
+.ht li a {
+  color: #000;
+}
+.ht li a:hover {
+  color: #f40;
+}
+.ht li:hover {
+  padding: 15px;
+  transition: all .5s ease-in;
+  transform: rotate(5deg);
+}
+/*html基础*/
+p{
+  margin-top:10px;
+}
+h2,h3,h4{
+margin-top: 20px;
+}
+.bt {
+  text-align: 50px;
+  color: coral;
+  margin-top: 20px;
+  margin-left: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#ziif {
+  text-align: 50px;
+  margin-top: 20px;
+  margin-left: 50px;
+  color: burlywood;
+}
+.main .zf span {
+  margin-left: 80px;
+  color: chocolate;
+}
+/*基础标签*/
+.jc h2 {
+  color: #ff0000;
+  margin-left: 50px;
+}
+.jc h4 {
+  margin-left: 80px;
+  margin-top: 10px;
+  color: #ff2233;
+}
+.jc p {
+  margin-left: 80px;
+  margin-top: 10px;
+  color: #ff2233;
+}
+.wd {
+  margin-left: 90px;
+  margin-top: 20px;
+  color: #113333;
+}
+.sp {
+  margin-top: 20px;
+  color: #113333;
+}
+.hh {
+  color: #ff2233;
+}
+.lb {
+  margin-left: 80px;
+  margin-top: 20px;
+  color: #ff2233;
+}
+.lb h3 {
+  margin-left: -60px;
+}
+.cs1{
+  width: 800px;
+}
+.img1 {
+ 
+  margin-left: 80px;
+  margin-top: 20px;
+  color: #ff2233;
+}
+.bm{
+  width: 95%;
+  color: #000;
+  background-color: #f6f4f0;
+  background-color: #d0e69c;
+  background-color: #dcecb5;
+  background-color: #e5eecc;
+  margin: 20px 0 5px 10px;
+  padding: 10px;
+  border: 1px solid #d4d4d4;
+  background-image: -webkit-linear-gradient(#fff, #e5eecc 100px);
+  background-image: linear-gradient(#fff, #e5eecc 100px);
+}

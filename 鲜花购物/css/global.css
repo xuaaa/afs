@@ -1,0 +1,36 @@
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	font-size: 12px;
+	font-family:"ËÎÌו",verdana, arial, helvetica, sans-serif;
+	background-color: #fff;
+}
+
+a {
+	color: #0679e4;
+	text-decoration: underline;
+}
+
+label {
+	cursor: pointer;
+}
+
+table{
+	table-layout: fixed;
+	padding: 0px;
+}
+
+table, tr, td {
+	border-width: 0px;
+	border-collapse: collapse;
+	border-spacing:0px;
+}
+
+.fri {
+	float: right;
+}
+

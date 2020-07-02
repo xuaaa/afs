@@ -1,0 +1,71 @@
+.title {
+  height: 60px;
+  background-color: rgba(111, 211, 111, 0.54);
+}
+.tit {
+  margin-left: 40%;
+  line-height: 60px;
+}
+.wapper {
+  width: 100%;
+  background-color: #fff;
+}
+.wapper ol li {
+  color: #fff;
+  padding: 10px;
+  background-color: rosybrown;
+  margin-left: 30px;
+  text-decoration: none;
+  list-style: none;
+  margin-top: 20px;
+}
+.wapper ol li h3 {
+  color: #000;
+}
+.wapper ol li p {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.main {
+    background-color: seashell;
+  padding: 20px;
+  width: 900px;
+  margin-left: 250px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+}
+/* shijian */
+.shijian,
+.shijianyunxing,
+.chulimodle,
+.stopbubble,
+.stopmoren,
+.shijianobject,
+.shijanfenlei {
+    background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+}
+/* 事件冒泡 */
+.chulimodle p {
+  color: #fff;
+  padding: 10px;
+  background-color: rosybrown;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+/* 事件分类 */
+.shijanfenlei h3,
+.shijanfenlei h4 {
+  margin-top: 10px;
+}
+.shijanfenlei .shijiansp {
+  margin-top: 10px;
+  display: block;
+  margin-left: 30px;
+}
+.shijanfenlei .daima p{
+    color: #000;
+    font-size: large;
+}

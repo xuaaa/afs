@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.head{
+    margin-top: 10px;
+    margin-left: 45%;
+}
+.wapper{
+    position: relative;
+    width:1200px;
+    margin-top: 30px;
+    margin-left: 200px;
+    height:1300px;
+    background-color: beige;
+}
+.mian{
+    position: absolute;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+.mian h3,h4{
+    margin-top: 100px;
+}
+
+.mian p,.zhuanshuan p{
+    margin-left: 30PX;
+    margin-top: 60px;
+}
+.leixing{
+    position: relative;
+    width:1200px;
+    height: 2600px;
+    margin-top: 30px;
+    margin-left: 200px;
+    background-color: beige;
+}
+.zhuanshuan{
+    position: absolute;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+.zhuanshuan h3,h4{
+    margin-top: 100px;
+}

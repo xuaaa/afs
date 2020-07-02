@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="笔记3.css" />
+    <link rel="stylesheet" type="text/css" href="../css/nav.css">
+    <title>笔记day3</title>
+</head>
+
+<body>
+    <!-- 标题 -->
+    <div class="top">
+        <h1 id="toptext">第三天笔记</h1>
+    </div>
+    <!-- 导航 -->
+    <div class="topnav">
+<div class="topnavt">
+    <ul>
+        <li><a href="#t">浮动流</a></li>
+        <li><a href="#f">淘宝导航</a></li>
+        <li><a href="#a">溢出问题</a></li>
+    </ul>
+</div>
+    </div>
+    <!--  解决浮动流-->
+    <div class="wapper">
+        <div class="float">
+            <p class="flt"><a name="t">解决浮动流:</a></p>
+            <p class="fft">昨天的问题在实际编程中，不能采取。要保持规范性。解决浮动流元素要利用伪元素清除浮动</p>
+        </div>
+        <div class="fdl">解决办法：</div>
+        <div class="wrapper">
+            <div class="content">1.浮动</div>
+            <div class="content">2.浮动</div>
+            <div class="content">3.浮动</div>
+        </div>
+        <div class="fdlj">
+            <p>解决编码如下:</p>
+            <div class="bm">
+                <p> .content{</p>
+                <p> float: left;</p>
+                <p> width: 100px;</p>
+                <p> height: 100px;</p>
+                <p> color: #fff;</p>
+                <p> background-color: #000;</p>
+                }</p>
+                <p> .wrapper::after{</p>
+                <p> display: block;</p>
+                <p> clear: both;</p>
+                <p> content: "";</p>
+                }
+            </div>
+            <div class="three">
+                设置了position：abolute；float浮动时
+                会把元素转化成inline-block
+            </div>
+            <div class="weilei3">伪元素3件套
+                <p> display: block;</p>
+                <p> clear: both;</p>
+                <p>content: "";</p>
+            </div>
+            <p class="bc">补充知识</p>
+            <div class="help">
+                <P>1.天生行级元素可通过dispaly:inline-bloack改变。</P>
+                <p>2.选中伪元素: 标签：：before或者after</p>
+                <span>我在中间</span>
+            </div>
+
+        </div>
+        <!-- 淘宝导航栏 -->
+        <h1 id="taobaonav"><a name="f">淘宝导航栏模拟</a></h1>
+        <div class="nav">
+            <div class="nav-top">
+                <p>淘宝导航栏</p>
+                <ul>
+                    <li><a href="#">天猫</a></li>
+                    <li><a href="#">聚划算</a></li>
+                    <li><a href="#">天猫超市</a></li>
+                </ul>
+                <ul id="tbnav">
+                    <li class="fenge">
+                        |
+                    </li>
+                    <li><a href="#">淘抢购</a> </li>
+                    <li> <a href="#">电器城</a> </li>
+                    <li><a href="#">司法拍卖</a> </li>
+                    <li> <a href="#">淘宝心选</a> </li>
+                    <li><a href="#">心农脱贫</a> </li>
+                </ul>
+                <ul id="lastnav">
+                    <li class="fenge">
+                        |
+                    </li>
+                    <li><a href="#">飞猪旅行</a> </li>
+                    <li> <a href="#">智能生活</a> </li>
+                    <li><a href="#">苏宁易购</a> </li>
+                </ul>
+            </div>
+        </div>
+   
+    <!-- 溢出问题 -->、
+    <div class="full">
+        <h1><a name="a">溢出问题</a></h1>
+        <p>1.单行文本</p>
+       <em>
+        <p>三大件</p>
+        <P>{while-space:nawrap;</P>
+        <P>overflow:hidden;</P>
+        <P>text-overflow:ellipsis;}</P></em>
+        <h2>多行文本可不管</h2>
+        <h3>总结：</h3>
+        <P>行级元素只能嵌套行级元素，块级元素能套任何元素，但是<em>&ltp></em>不可以</P>
+        <P><em>&lta>标签不能套&lta>标签</em></P>
+        <P>带有inline的元素叫文本类元素。能被文字分割符分开</P>
+    </div>
+    </div>
+    <div class="fater">
+        <div class="ft">
+            <p>学习第三天</p>
+            <span>css选择器浮动，定位还需要多加训练。</span>
+        </div>
+    </div>
+            <!-- nav -->
+            <div class="fixnav">
+                <div class="fixnav-wapper">
+                    <div class="fixtit">
+                        <h3 class="fixtitle">学习笔记</h3>
+                    </div>
+                    <ul>
+                        <li><a href="../521-day1/笔记.html">第一天</a></li>
+                        <li><a href="../521-day2/笔记2.HTML">第二天</a></li>
+                        <li><a href="../521-day3/笔记3.html">第三天</a></li>
+                        <li><a href="../521-day4/笔记4.html">第四天</a></li>
+                        <li><a href="../521-day5/note5.html">第五天</a></li>
+                        <li><a href="../521-day6/note6.html">第六天</a></li>
+                        <li><a href="../521-day7/note7.html">第七天</a></li>
+                        <li><a href="../521-day8/note8.html">第八天</a></li>
+                        <li><a href="../521-day9/note9.html">第九天</a></li>
+                        <li><a href="../521-day10/note10.html">第十天</a></li>
+                        <li><a href="../521-day11/note11.html">第十一天</a></li>
+                        <li><a href="../521-day12/note12.html">第十二天</a></li>
+                        <li><a href="../521-day13/note13.html">第十三天</a></li>
+                        <li><a href="../521-day14/note14.html">第十四天</a></li>
+                        <li><a href="../521-day15/note15.html">第十五天</a></li>
+                        <li><a href="../521-day16/note16.html">第十六天</a></li>
+                        
+                    <li><a href="../521-day17/note17.html">第十七天</a></li>
+                    <li><a href="../521-day18/note18.html">第十八天</a></li>
+                    <li><a href="../521-day19/note19.html">第十九天</a></li>
+                    <li><a href="../521-day20/note20.html">第二十天</a></li>
+                    <li><a href="../521-day21/note21.html">第二十一天</a></li>
+                    <li><a href="../521-day22/note22.html">第二十二天</a></li>
+                    </ul>
+                </div>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="笔记4.css" />
+    <link rel="stylesheet" type="text/css" href="../css/nav.css">
+    <title>521-day4</title>
+</head>
+
+<body>
+    <!-- 标题 -->
+    <div class="toptitle">
+        <h1>第四天笔记</h1>
+    </div>
+    <!-- 导航 -->
+    <div class="top">
+        <ul class="clearfix">
+            <li>浏览器</li>
+            <li>js简介</li>
+            <li>引入js</li>
+            <li>js命名</li>
+            <li>js运算</li>
+        </ul>
+    </div>
+    <!-- 首页内容 -->
+    <div class="layer">
+        <!-- 浏览器组成 -->
+        <div class="browsergrop" class="clearfix">
+            <h2><a name="la">浏览器组成部分:</a></h2>
+            <h3>1.shell部分</h3>
+            <p><a href="https://baike.baidu.com/item/shell/99702?fr=aladdin"
+                    target="_block">点击查看详情&nbsp;&nbsp;&nbsp;&nbsp;></a></p>
+            <h3>2.内核部分</h3>
+            <p>渲染引擎</p>
+            <p>js引擎</p>
+            <p>其他模块</p>
+        </div>
+    </div>
+    <!-- js简介 -->
+    <div class="js-introduction">
+        <div class="js-jj">
+            <h2><a name="lj">js简介</a></h2>
+            <p>js是一门单线程语言</p>
+            <p>js是一门解释性语言，不需要预编译，边解释边执行</p>
+            <p>不足：稍微慢</p>
+            <p>优点：跨平台</p>
+            <div class="by">
+                <p class="bytltle">对比编译性语言:</p>
+                <p>打包通篇在进行编译。(c，c++)</p>
+                <P>优点：快</P>
+                <p>不足：移植性不好</p>
+            </div>
+        </div>
+        <div class="js-main">
+            <h2>js 执行主线程</h2>
+            <p>轮转时间片类似吃饭</p>
+            <p>task1,1ms——task2,1ms——task1,1ms——task2,1ms——task2，1ms——task1,1ms——主线程</p>
+            <h2>js三大部分</h2>
+            <p>1.ECMASCRIPT</p>
+            <P>2.DOM</P>
+            <P>3.BOM</P>
+        </div>
+    </div>
+    <!-- 引入js -->
+    <div class="importjs">
+        <h2><a name="ly">js的引用</a></h2>
+        <h4>页面：</h4>
+        <div class="ym">
+            <p> &lthtml></p>
+            <p> &ltbody></p>
+            <p> &ltscript></p>
+            <p> xxxxxxxxx</p>
+            <p> &lt/script></p>
+            <p> &lt/body></p>
+            <p> &lt/html></p>
+            <h4>外部:</h4>
+            <p>&ltscript type="text/javascript" src="地址"></p>
+        </div>
+        <!-- JS命名 -->
+        <div class="jsnamed">
+            <h2><a name="lm">js命名</a></h2>
+            <h3>声明变量：var</h3>
+            <h4>单一var：</h4>
+            <p>var a = 10,</p>
+            <p>b = 20,</p>
+            <p>c = 30;</p>
+            <div class="jsnamedrull">
+                <h2>命名规则</h2>
+                <ol class="rull" type="1">
+                    <li>变量名必须以<em>英文字母“_(下划线)”,“$”开头</em>。</li>
+                    <li>变量名可以包含<em>英文字母“_(下划线)”,“$”，数字</em>。</li>
+                    <li>不可以用系统的<em>关键字、保留字</em>作为变量名</li>
+                </ol>
+            </div>
+            <h2>基本语法：</h2>
+            <h3>值类型</h3>
+            <h4>原始值: <em>Number,String,Boolean,undefined,null</em></h4>
+            <p>Number: var&nbsp;&nbsp;b&nbsp;&nbsp;=&nbsp;&nbsp;3</p>
+            <p>String:&nbsp;字符串&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;&nbsp;b&nbsp;&nbsp;=&nbsp;&nbsp;"我是字符串"</p>
+            <p>Boolean：true/flase.</p>
+            <p>undefined:未给变量赋值</p>
+            <p>null：空值</p>
+            <h4>引用值：<em>array,object,function,...,date,</em>... </h4>
+            <h2>语句基本规则</h2>
+            <p>1.语句后面要用<em>分号</em>结束</p>
+            <p>2.语法错误会引发后续代码终止，但不会影响其他代码块行驶。</p>
+            <p>3.书写格式要规范，<em>“=”，“+”，“-”，“/”</em>两边都应有空格。</p>
+        </div>
+    </div>
+    <!-- 运算 -->
+    <div class="operation">
+        <div class="ltation">
+            <h2><a name="ls">运算符</a></h2>
+            <h3>运算操作符:</h3>
+            <p>"+"</p>
+            <p>1.数学运算，字符串相连</p>
+            <p>2.任何数据类型加字符串都等于字符串</p>
+        </div>
+        <div class="ration" class="clearfix">
+            <h3>优先级“=”最弱，“（）“优先级最强</h3>
+            <p>a++等于a=a+1；</p>
+            <p>a+=10等于a=a+10</p>
+            <h3>赋值的顺序，自右向左。运算顺序，自左向右</h3>
+        </div>
+    </div>
+    <!-- 悬浮导航 -->
+    <div class="fix">
+        <ul>
+            <li><a href="#la">浏览器</a></li>
+            <li><a href="#lj">js简介</a></li>
+            <li><a href="#ly">引入js</a></li>
+            <li><a href="#lm">js命名</a></li>
+            <li><a href="#ls">js运算</a></li>
+        </ul>
+    </div>
+            <!-- nav -->
+            <div class="fixnav">
+                <div class="fixnav-wapper">
+                    <div class="fixtit">
+                        <h3 class="fixtitle">学习笔记</h3>
+                    </div>
+                    <ul>
+                        <li><a href="../521-day1/笔记.html">第一天</a></li>
+                        <li><a href="../521-day2/笔记2.HTML">第二天</a></li>
+                        <li><a href="../521-day3/笔记3.html">第三天</a></li>
+                        <li><a href="../521-day4/笔记4.html">第四天</a></li>
+                        <li><a href="../521-day5/note5.html">第五天</a></li>
+                        <li><a href="../521-day6/note6.html">第六天</a></li>
+                        <li><a href="../521-day7/note7.html">第七天</a></li>
+                        <li><a href="../521-day8/note8.html">第八天</a></li>
+                        <li><a href="../521-day9/note9.html">第九天</a></li>
+                        <li><a href="../521-day10/note10.html">第十天</a></li>
+                        <li><a href="../521-day11/note11.html">第十一天</a></li>
+                        <li><a href="../521-day12/note12.html">第十二天</a></li>
+                        <li><a href="../521-day13/note13.html">第十三天</a></li>
+                        <li><a href="../521-day14/note14.html">第十四天</a></li>
+                        <li><a href="../521-day15/note15.html">第十五天</a></li>
+                        <li><a href="../521-day16/note16.html">第十六天</a></li>
+                        
+                    <li><a href="../521-day17/note17.html">第十七天</a></li>
+                    <li><a href="../521-day18/note18.html">第十八天</a></li>
+                    <li><a href="../521-day19/note19.html">第十九天</a></li>
+                    <li><a href="../521-day20/note20.html">第二十天</a></li>
+                    <li><a href="../521-day21/note21.html">第二十一天</a></li>
+                    <li><a href="../521-day22/note22.html">第二十二天</a></li>
+                    </ul>
+                </div>
+</body>
+
+</html>

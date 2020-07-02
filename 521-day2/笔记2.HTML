@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>521day2笔记</title>
+    <link rel="stylesheet" type="text/css" href="笔记2.css" />
+    <link rel="stylesheet" type="text/css" href="../css/nav.css">
+</head>
+
+<body>
+
+    <div id="top">
+        <div class="text">
+            <h1>第二天笔记</h1>
+            <ul>
+                <li><a href="#w1">伪类选择器</a></li>
+                <li><a href="#y1">元素</a></li>
+                <li><a href="#h1">盒子模型</a></li>
+                <li><a href="#p1">定位</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="wanner">
+        <div class="main">
+            <p>1.这是三角形</p>
+            <div class="triange"></div>
+            <p id="ci">2.单行文本垂直居中</p>
+            <div class="tan">我在中间</div>
+        </div>
+
+        <div class="zj">
+            <h1>小知识总结:</h1>
+            <div class="zj1">
+                <ol class="z1" type="1">
+                    <li>对齐方式：text-align</li>
+                    <li>单行文本所占高度：line-height</li>
+                    <li>首行缩进：text-indent 单位 ：em</li>
+                    <li>文本线：text-decoration (line-through 中划线 underline 下划线)</li>
+                    <li>鼠标触碰的光标：cursor </li>
+                </ol>
+            </div>
+        </div>
+        <h1 class="wi"><a name="w1">伪类选择器:</a></h1>
+        <div class="weilei">
+            <div class="weo">点我变颜色</div>
+            <p>用法：标签:hover{}</p>
+        </div>
+        <div class="elemt">
+            <h1><a name="y1">元素：</a></h1>
+            <div class="ele">
+                <ol type="1">
+                    <li>行级元素：内容决定元素所占位置，不可以通过css改变宽高。已学（span,strong,em,a,del）</li>
+                    <li>块级元素：独占一行，可以通过css改变宽高。已学（div，p,ul,li,ol,from,address）</li>
+                    <li>行块级元素：内容决定大小，可改变宽高（img）</li>
+                    <li>可通过dispaly改变：span{dispaly:inline}</li>
+                    <li>div{dispaly:block}</li>
+                    <li>img{dispaly:inline-block}</li>
+                </ol>
+                <div class="ki">我是块级元素</div>
+                <span class="hj">我是行级元素</span>
+                <p>下面是行块级元素</p>
+                <img src="笔记2img/背景.jpg">
+            </div>
+            <div class="box">
+                <div class="box1">
+                    <h2><a name="h1">盒子模型:</a></h2>
+                    <p>盒子包括：1.盒子璧 boder</p>
+                    <p>2.内边距 padding</p>
+                    <p>3.内容</p>
+                    <div class="hz">
+                        <p>这是一个盒子，我是内容。</p>
+                        <img src="笔记2img/内容.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="position">
+                <h1><a name="p1">定位：</a></h1>
+                <h4>absolute:</h4>
+                <span>脱离原来位置进行定位，相对最近有定位的父级进行定位，如没有则相对于文档进行定位</span>
+                <h4>relative:</h4>
+                <span>保持原来位置进行定位，相对于原来位置进行定位</span>
+                <div class="ab">这是绝对定位，相对父级</div>
+                <div class="xd">这是相对定位</div>
+                <div class="fix">这是绝对定位，相对窗口</div>
+            </div>
+            <h1 class="hu">创建一个五环:</h1>
+            <div class="cirle">
+                <p>这是一个五环</p>
+                <div class="wu">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                    <div class="circle5"></div>
+                </div>
+            </div>
+            <div class="two">
+                <h1>两栏布局:</h1>
+                <p>方法一：右侧float：right。左侧margin-right；</p>
+                <p>方法二：右侧float：right。右侧：overflow：hidden;</p>
+                <div class="right"> 这是右边</div>
+                <div class="left">这是左边</div>
+
+            </div>
+            <div class="ju">
+                <h2>解决方案：触发bfc</h2>
+                <ol type="1">
+                    <li>绝对定位</li>
+                    <li>display：inline-block</li>
+                    <li>float:浮动</li>
+                    <li> overflo：hidden</li>
+                </ol>
+            </div>
+            <div class="bug">
+                <div class="content"></div>
+            </div>
+            <div class="fd">
+                <h2>浮动模型</h2>
+                <p>所有产生了浮动流的元素，块级元素看不到他</p>
+                <p>产生bfc的元素和文本（inline）类属性的元素以及文本都能看到浮动元素</p>
+                <p>解决取浮动流，添加一个p标签，设置样式clear：both；逻辑存在就行。</p>
+            </div>
+            <div class="float">
+                <div class="ft">这是浮动元素1</div>
+                <div class="ft">这是浮动元素2</div>
+                <div class="ft">这是浮动元素3</div>
+                <p></p>
+            </div>
+            <p class="en">总结：</p>
+            <p class="end"> 标签还不熟练，css使用不熟练。没有总体全局的样式。比较模糊。只能一层一层写</p>
+        </div>
+        <!-- nav -->
+        <div class="fixnav">
+            <div class="fixnav-wapper">
+                <div class="fixtit">
+                    <h3 class="fixtitle">学习笔记</h3>
+                </div>
+                <ul>
+                    <li><a href="../521-day1/笔记.html">第一天</a></li>
+                    <li><a href="../521-day2/笔记2.HTML">第二天</a></li>
+                    <li><a href="../521-day3/笔记3.html">第三天</a></li>
+                    <li><a href="../521-day4/笔记4.html">第四天</a></li>
+                    <li><a href="../521-day5/note5.html">第五天</a></li>
+                    <li><a href="../521-day6/note6.html">第六天</a></li>
+                    <li><a href="../521-day7/note7.html">第七天</a></li>
+                    <li><a href="../521-day8/note8.html">第八天</a></li>
+                    <li><a href="../521-day9/note9.html">第九天</a></li>
+                    <li><a href="../521-day10/note10.html">第十天</a></li>
+                    <li><a href="../521-day11/note11.html">第十一天</a></li>
+                    <li><a href="../521-day12/note12.html">第十二天</a></li>
+                    <li><a href="../521-day13/note13.html">第十三天</a></li>
+                    <li><a href="../521-day14/note14.html">第十四天</a></li>
+                    <li><a href="../521-day15/note15.html">第十五天</a></li>
+                    <li><a href="../521-day16/note16.html">第十六天</a></li>
+                    
+                    <li><a href="../521-day17/note17.html">第十七天</a></li>
+                    <li><a href="../521-day18/note18.html">第十八天</a></li>
+                    <li><a href="../521-day19/note19.html">第十九天</a></li>
+                    <li><a href="../521-day20/note20.html">第二十天</a></li>
+                    <li><a href="../521-day21/note21.html">第二十一天</a></li>
+                    <li><a href="../521-day22/note22.html">第二十二天</a></li>
+                </ul>
+            </div>
+</body>
+
+</html>

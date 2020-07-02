@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>note19</title>
+    <link rel="stylesheet" type="text/css" href="note19.css">
+    <link rel="stylesheet" type="text/css" href="../css/nav.css" />
+</head>
+
+<body>
+    <!-- title -->
+    <div class="title">
+        <div class="tit">
+            <h1>第十九天笔记</h1>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="wapper">
+        <div class="main">
+            <div class="main-pageOffset">
+
+                <h2>查看滚动条距离</h2>
+                <div class="main-offset">
+                    <h4>Window.pagexOffset/pageyOffset</h4>
+                    <p>ie8以及ie8以下的浏览器不兼容</p>
+                    <h4>documnet.body/documentElement.scrollLeft/scrollTop</h4>
+                    <p>兼容性比较混轮，用时取两个值相加，因为不可能存在两个同时有值</p>
+                    <h4>封装兼容方法，求滚动轮滚动距离，getSrollOffset()</h4>
+                </div>
+                <div class="daima">
+                    <span>function getScrollOffset(){</span>
+                    <span class="suojin">return{</span>
+                    <span class="suojin3">x:Window.pagexOffset,</span>
+                    <span class="suojin3">y:Wiindow.pageyOffset</span>
+                    <span class="suojin">}</span>
+                    <span class="suojin">}else{</span>
+                    <span class="suojin3">return{</span>
+                    <span class="suojin3">x:document.body.ScrollLeft+document.documentElement.Scrollleft,</span>
+                    <span class="suojin3">y:document.body.ScrollTop+documentElement.ScrollTop</span>
+                    <span class="suojin3">}</span>
+                    <span class="suojin">}</span>
+                    <span>}</span>
+                </div>
+            </div>
+            <!-- 查看视口尺寸 -->
+            <div class="inner">
+                <h2>查看视口尺寸</h2>
+                <ol>
+                    <li>
+                        <h4>Window.innerWidth/innerHeiht</h4>
+                        <P>ie8及以下不兼容</P>
+                    </li>
+                    <li>
+                        <h4>document.documentElement.clientWidth/clienHeight</h4>
+                        <p>标准模式下，任意浏览器都兼容</p>
+                    </li>
+                    <li>
+                        <h4>document.body.clienWidth/clienHeight</h4>
+                        <p>适用于怪异模式下浏览器</p>
+                    </li>
+                    <li>封装兼容性方法，返回浏览器视口尺寸getViewProtOffset</li>
+                </ol>
+                <div class="daima">
+                    <span>function getViewprotOffset(){</span>
+                    <sapn class="suojin">if(window.innerwidth){</sapn>
+                    <span class="suojin">return{</span>
+                    <span class="suojin3">w:Window.innerWidth,</span>
+                    <span class="suojin3">h:window.innerHeight</span>
+                    <span class="suojin">}</span>
+                    <span class="suojin">}else{</span>
+                    <span class="suojin3">if(document.ComputerMode==="BackComput"){</span>
+                    <span class="suojin3">return{</span>
+                    <span class="suojin3">w:document.body.clientWidth,</span>
+                    <span class="suojin3">h;document.body.clintHeight</span>
+                    <span class="suojn">}</span>
+                    <span class="suojin">}else{</span>
+                    <span class="suojin3">return{</span>
+                    <span class="suojin3">w:document.documentElement.clientWidth,</span>
+                    <span class="suojin3">h:document.documentElement.clinetHeight</span>
+                    <span class="suojin3">}</span>
+                    <span class="suojin">}</span>
+                    <span>}</span>
+                </div>
+
+            </div>
+            <!-- 查看元素尺寸 -->
+            <div class="ElementOffset">
+                <h2>查看元素尺寸</h2>
+                <ol>
+                    <li>dom.OffsetWidth,dom.Offsetheight</li>
+                </ol>
+                <h2>查看元素位置</h2>
+                <ol>
+                    <li>
+                        <h4>dom.OffsetLeft,dom.OffsetTop</h4>
+                        <p>对于无定位的父级元素返回相对的文档坐标，对有父级元素的定位，返回相对于最近的有定位的父级的坐标</p>
+                    </li>
+                    <li>
+                        <h4>dom.OffsetParent</h4>
+                        <p>返回最近的有定位父级，如返回body.OffsetParent返回null</p>
+                        <p>eg:求元素相对于文档的坐标.getElementPosition</p>
+                    </li>
+                </ol>
+            </div>
+            <!-- 滚动条滚动 -->
+            <div class="windowScsroll">
+                <h2>window的三方法</h2>
+                <h4>scroll(),scrollTo(),SCrollBy()</h4>
+                <p>
+                    三个方法功能类似，用法都是将x，y坐标传入，即实现让滚动轮滚动当前位置。
+                </p>
+                <p>区别：ScrollBy（）会在之前的数据基础上做累加。可以做快速阅读功能。</p>
+                <p><img src="img/快速阅读.png" alt="js"></p>
+            </div>
+            <!-- 脚本化css -->
+            <div class="stylejiaoebn">
+                <h2>脚本化css</h2>
+                <h3>读写元素css属性</h3>
+                <ol>
+                    <li>
+                        <h4>dom.style.prop</h4>
+                        <p>可读写行间样式，没有兼容性问题，碰到float这样保留字属性，前面加css。</p>
+                        <p>eg：float--->cssfloat</p>
+                        <p>复合属性必须拆解，组合单词变化小驼峰式写法，写入的值必须是字符串格式</p>
+                    </li>
+                    <li>
+                        <h4>查询计算样式：</h4>
+                        <p>Windo.getComputedStyl(ele,null)</p>
+                        <p>null可以选中伪元素</p>
+                        <p>window.getComputerStyle(div,after)</p>
+                    </li>
+                    <li>
+                        <h4>计算样式只读：</h4>
+                        <p>返回的计算样式的值是绝对值，没有相对单位。ie8以及以下不兼容</p>
+                    </li>
+                </ol>
+                <h3>
+                    查询样式；ele.currentStyle
+                </h3>
+                <h4>计算样式只读</h4>
+                <p>返回的计算样式的值不是经过转换的绝对值。ie才独有</p>
+                <h4>
+                    封装兼容方法getStyle(elem,prop)
+                </h4>
+                <div class="daima">
+                    <span>function getStyle(elem（属性）,prop(参数)){
+
+                    </span>
+                    <span class="suojin">if (window.getComputedStyle){</span>
+                    <span class="suojin3">return window.getComputedStyle(elem,prop)[prop];</span>
+                    <span class="suojin">}else{</span>
+                    <span class="suoji8n3">return elem.currentStyle[prop]</span>
+                    <span class="suojin">}</span>
+                    <span>}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+       <!-- nav -->
+       <div class="fixnav">
+        <div class="fixnav-wapper">
+            <div class="fixtit">
+                <h3 class="fixtitle">学习笔记</h3>
+            </div>
+            <ul>
+                <li><a href="../521-day1/笔记.html">第一天</a></li>
+                <li><a href="../521-day2/笔记2.HTML">第二天</a></li>
+                <li><a href="../521-day3/笔记3.html">第三天</a></li>
+                <li><a href="../521-day4/笔记4.html">第四天</a></li>
+                <li><a href="../521-day5/note5.html">第五天</a></li>
+                <li><a href="../521-day6/note6.html">第六天</a></li>
+                <li><a href="../521-day7/note7.html">第七天</a></li>
+                <li><a href="../521-day8/note8.html">第八天</a></li>
+                <li><a href="../521-day9/note9.html">第九天</a></li>
+                <li><a href="../521-day10/note10.html">第十天</a></li>
+                <li><a href="../521-day11/note11.html">第十一天</a></li>
+                <li><a href="../521-day12/note12.html">第十二天</a></li>
+                <li><a href="../521-day13/note13.html">第十三天</a></li>
+                <li><a href="../521-day14/note14.html">第十四天</a></li>
+                <li><a href="../521-day15/note15.html">第十五天</a></li>
+                <li><a href="../521-day16/note16.html">第十六天</a></li>
+                <li><a href="../521-day17/note17.html">第十七天</a></li>
+                <li><a href="../521-day18/note18.html">第十八天</a></li>
+                <li><a href="../521-day19/note19.html">第十九天</a></li>
+                <li><a href="../521-day20/note20.html">第二十天</a></li>
+                <li><a href="../521-day21/note21.html">第二十一天</a></li>
+                <li><a href="../521-day22/note22.html">第二十二天</a></li>
+
+
+
+
+            </ul>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.title {
+  height: 60px;
+  background-color: aliceblue;
+}
+.tit {
+  width: 200px;
+  line-height: 60px;
+  margin-left: 45%;
+}
+.wapper {
+height: 2800px;
+  position: relative;
+  background-color: antiquewhite;
+}
+.main {
+  padding: 20px;
+  border: 1px solid #ccc;
+  position: absolute;
+  width: 900px;
+
+  margin-top: 30px;
+  margin-left: 300px;
+  background-color: #fff;
+}
+.jicehng li {
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.daima {
+  padding: 20px;
+  margin: 20px;
+  background-color: burlywood;
+}
+.shuxing,
+.duixa {
+  margin-top: 200px;
+  margin-left: 20px;
+}

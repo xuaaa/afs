@@ -1,0 +1,24 @@
+.tilt{
+    height: 60px;
+}
+.tilt h2{
+    text-align: center;
+}
+
+.wapper{
+    width: 1000px;
+    border: 1px solid #ccc;
+    padding: 10px;
+
+    margin-left:250px;
+}
+a{
+    text-decoration: none;
+}
+.fi{
+    padding: 10px;
+    background-color: antiquewhite;
+    position: fixed;
+    top:30%;
+    left: 100px;
+}

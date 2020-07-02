@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ol li {
+  list-style: none;
+}
+.title {
+  margin-left: 45%;
+}
+.wapper {
+  background-color: rgba(240, 238, 240,.5);
+
+margin-top: 20px;
+  width: 100%;
+}
+.main {
+  /* border: 1px solid #ccc; */
+  padding: 50px;
+  width: 1100px;
+  background-color: beige;
+  margin-left: 250px;
+}
+.main-one,
+.main-two {
+  padding: 10px;
+  border: 1px solid #ccc;
+  height: 1400px;
+ 
+}
+.main-one ol {
+  margin-top: 50px;
+}
+.main-one li,
+img {
+  margin-left: 60px;
+  margin-top: 30px;
+}
+.main img {
+  width: 600px;
+}
+.main-two p {
+  margin-top: 10px;
+  margin-left: 60px;
+}
+.hanshuleijia,
+.cucun {
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.main-two h3,
+.main-two h2,
+.main-two h5 {
+  margin-top: 20px;
+}

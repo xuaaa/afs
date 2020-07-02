@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*初始化标签*/
+
+ul li {
+  list-style: none;
+  color: #ff2200;
+}
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+#wanner {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 1000px;
+  height: 100%;
+  margin-left: 300px;
+  margin-top: 10px;
+  background-color:#fff;
+}
+/* 标题 */
+.text h1 {
+  text-align: center;
+  font-family: fantasy;
+  color: black;
+  margin-top: 1px;
+  height: 60px;
+  background-color: #fff;
+}
+/* 导航 */
+.text ul {
+  padding: 0px 10px 10px 10px;
+  position: fixed;
+  width: 150px;
+  top: 20%;
+  left: 90%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #fff;
+  border: 1px solid #ff0000;
+  text-align: center;
+}
+.text ul li {
+  margin-left: 20px;
+  width: 100px;
+  background-color: #f40;
+  margin-top: 10px;
+}
+.text ul li a{
+color: #fff;
+}
+.text li:hover{
+  padding: 10px;
+} 
+/* 内容 */
+.main p {
+  margin-top: 0px;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 30px;
+  color: black;
+}
+#ci {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  color: black;
+}
+.triange {
+  width: 0;
+  height: 0;
+  margin-left: 70px;
+  border: 70px solid red;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.tan,
+.weo {
+  width: 200px;
+  height: 80px;
+  margin-left: 80px;
+  border-radius: 30%;
+  color: black;
+  background-color: #fff;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 80px;
+}
+.tan:hover {
+  background-color: #f40;
+  color: black;
+}
+.zj h1 {
+  margin-left: 10px;
+  color: black;
+}
+.z1 {
+  width: 300px;
+  color: #000;
+  margin-left: 80px;
+}
+.wi {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 30px;
+  color: black;
+}
+.weo:hover {
+  background-color: #000000;
+  color: floralwhite;
+}
+.weilei p {
+  margin-left: 50px;
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
+}
+.elemt h1 {
+  margin-left: 30px;
+}
+.ele {
+  margin-left: 70px;
+  font-size: 20px;
+}
+/* 元素 */
+.ki {
+  height: 90px;
+  margin-left: -70px;
+  background-color: hotpink;
+  color: ivory;
+  font-size: 30px;
+}
+.hj {
+  background-color: lightcoral;
+}
+.ele img {
+  width: 600px;
+}
+/* 盒子模型 */
+.box {
+  margin-top: 30px;
+  background-color: khaki;
+}
+.box1 h2 {
+  margin-left: 30px;
+}
+.box p {
+  color: chocolate;
+  margin-left: 100px;
+}
+.hz {
+  margin-left: 30px;
+  position: relative;
+  width: 480px;
+  height: 300px;
+  margin-left: 200px;
+  border: 2px solid #f40;
+  line-height: 300px;
+  color: black;
+}
+.hz p {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-top: 0px;
+  margin-left: -100px;
+  font-size: 20px;
+  color: honeydew;
+  z-index: 3;
+}
+.hz img {
+  position: absolute;
+  height: 300px;
+  float: left;
+}
+/* 绝对定位 */
+.position {
+  position: relative;
+  margin-left: 60px;
+}
+.position h1,
+h4 {
+  color: #f40;
+  font-size: 30px;
+}
+.position span {
+  color: coral;
+}
+.ab {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: #ff00ff;
+  color: aliceblue;
+  margin-left: 500px;
+  top: 200px;
+}
+.xd {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background-color: green;
+  color: honeydew;
+  margin-top: 50px;
+  margin-left: 200px;
+  line-height: 100px;
+  text-align: center;
+}
+.fix {
+  position: fixed;
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  left: 80%;
+  top: 50%;
+  margin-left: 50px;
+  line-height: 100px;
+  text-align: center;
+}
+/* 五环  */
+.hu {
+  margin-top: 30px;
+  margin-left: 30px;
+  color: black;
+}
+.cirle {
+  position: relative;
+  margin-top: 100px;
+  height: 200px;
+  background-color: darkseagreen;
+}
+
+.cirle p {
+  color: firebrick;
+}
+.wu {
+  margin-left: 35%;
+}
+.circle1,
+.circle2,
+.circle3,
+.circle4,
+.circle5 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 100%;
+  padding: 30px;
+}
+.circle1 {
+  border: 3px solid red;
+}
+.circle2 {
+  border: 3px solid green;
+  margin-left: 70px;
+}
+.circle3 {
+  border: 3px solid yellow;
+  margin-left: 140px;
+}
+.circle4 {
+  border: 3px solid black;
+  margin-top: 60px;
+  margin-left: 40px;
+}
+.circle5 {
+  border: 3px solid darkorange;
+  margin-top: 60px;
+  margin-left: 120px;
+}
+/* 两栏布局 */
+.two {
+  position: relative;
+  margin-top: 60px;
+  color: black;
+}
+.two p {
+  margin-left: 30px;
+  color: #f40;
+}
+.right {
+  float: right;
+  width: 300px;
+  height: 400px;
+  background-color: firebrick;
+}
+.left {
+  margin-right: 300px;
+  height: 400px;
+  background-color: green;
+}
+/* bug解决 */
+.ju {
+  margin-left: 30px;
+}
+.ju ol {
+  margin-left: 60px;
+  margin-top: 30px;
+}
+.bug {
+  margin-left: 100px;
+  margin-top: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  overflow: hidden;
+}
+.content {
+  margin-left: 50px;
+  margin-top: 50px;
+  width: 50px;
+  height: 50px;
+  background-color: green;
+}
+/* 浮动元素 */
+.fd {
+  margin-left: 30px;
+}
+.fd h2 {
+  color: black;
+}
+.float {
+  border: 1px solid black;
+}
+.ft {
+  float: left;
+  color: #fff;
+  background-color: black;
+  width: 100px;
+  height: 100px;
+}
+.float p {
+  clear: both;
+  border: 0px solid red;
+}
+.en,
+.end {
+  margin-left: 60px;
+  height: 100px;
+  margin-top: 30px;
+  color: black;
+}
+.en {
+  font-size: 30px;
+}

@@ -1,0 +1,93 @@
+.title {
+    height: 60px;
+    background-color: rgba(111, 211, 111, 0.54);
+  }
+  .tit {
+    margin-left: 40%;
+    line-height: 60px;
+  }
+  .wapper {
+    width: 100%;
+    background-color: #fff;
+  }
+  .wapper ol li {
+    color: #fff;
+    padding: 10px;
+    background-color: rosybrown;
+    margin-left: 30px;
+    text-decoration: none;
+    list-style: none;
+    margin-top: 20px;
+  }
+  .wapper ol li h3 {
+    color: #000;
+  }
+  .wapper ol li p {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  .main {
+    background-color: seashell;
+    padding: 20px;
+    width: 900px;
+    margin-left: 20%;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+  }
+.main-top{
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.main-top p{
+    margin-top: 20px;
+}
+.red{
+    color: #f20;
+}
+.grenn{
+    color: green;
+}
+/* main-two */
+.main-two{
+    margin-top: 50px;
+}
+.main-two p{
+margin-top: 20px;
+}
+.main-two h3{
+    margin-top: 20px;
+}
+/* <!-- 正则表达式创建方式 --> */
+.mainthree{
+    margin-top: 80px;
+}
+.mainthree h4, .mainthree h5{
+    margin-top: 50px;
+}
+/* 元字符 */
+.yuanzifumapper{
+    margin-top: 100px;
+    padding: 20px 0px 20px 20px;
+}
+.yuanzifumapper p{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.yuanzifu,.zifulaingci{
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    color: red;
+}
+.yuanzifu p{
+    margin-top: 10px;
+}
+.zifulaingci{
+color: lightseagreen    ;
+}
+.blue{
+    color: lightseagreen    ;   
+}

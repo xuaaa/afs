@@ -1,0 +1,68 @@
+/* daohang */
+.fixnav {
+  position: fixed;
+  top: 50px;
+  left: 20px;
+}
+.fixtit h3 {
+  position: relative;
+  margin-left: 40px;
+}
+.fixnav-wapper {
+  border: 1px solid #ccc;
+}
+.fixnav ul {
+  padding: 10px;
+  overflow-y: scroll;
+  height: 550px;
+  background-color: #d0e69c;
+  width: 150px;
+}
+.fixnav a {
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+}
+.fixnav ul li {
+  margin-left: 20px;
+  margin-top: 20px;
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  width: 100px;
+  background-color: #fff;
+}
+.fixnav ul li:hover {
+  padding: 1px 10px 0px 0px;
+  background-color: #f40;
+}
+.fixnav ul li a:hover {
+  color: #fff;
+}
+/*  */
+.daima span {
+  margin-top: 10px;
+  display: block;
+}
+.daima .suojin {
+  text-indent: 2em;
+}
+.daima .suojin3 {
+  text-indent: 3em;
+}
+.daima .suojin4 {
+  text-indent: 4em;
+}
+.daima {
+  width: 95%;
+  color: #000;
+  background-color: #f6f4f0;
+  background-color: #d0e69c;
+  background-color: #dcecb5;
+  background-color: #e5eecc;
+  margin: 20px 0 5px 10px;
+  padding: 20px;
+  border: 1px solid #d4d4d4;
+  background-image: -webkit-linear-gradient(#fff, #e5eecc 100px);
+  background-image: linear-gradient(#fff, #e5eecc 100px);
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常用函数封装</title>
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/fen.css">
+</head>
+
+<body>
+    <div class="tilt">
+        <h2>常用函数封装</h2>
+    </div>
+    <!-- main -->
+    <div class="wapper">
+        <div class="pabduan">
+            <h2>tostring</h2>
+            <div class="daima">
+                <span>function deepClone(origin,target){</span>
+                <span class="suojin">var target = target || {},</span>
+                <apan class="suojin3">toStr =Object.prototype.toString,</apan>
+                <span class="suojin3">"[object Array]";</span>
+                <span class="suojin">for(var prop in origin){</span>
+                <span class="suojin3">if(origin.hasOwnProperty(prop)){</span>
+                <span class="suojin4">else if(origin[prop]) !=="null" && typeof(origin[prop])</span>
+                <span class="suojin4">== 'object'){</span>
+                <span class="suojin4">target[prop] = toStr.call(origiin[prop])== arrStr ? [] : {;
+                </span>
+                <span class="suojin4">deepClone(origin[prop],target[prop]);</span>
+                <span class="suojin3">elde{</span>
+                <span class="suojin4">target[prop] = origin[prop];
+                </span>
+                <span class="suojin4">}</span>
+                <span class="suojjin3">}</span>
+                <span class="suojin">}</span>
+                <span class="suojin">return target;</span>
+                <span>}</span>
+            </div>
+        </div>
+        <div class="insert">
+            <h2>insertAfter封装方法</h2>
+            <div class="daima">
+                <span>&ft;div></span>
+                <span class="suojin">&ft;i></span>
+                <span class="suojin">&ft;b></span>
+                <span class="suojin">&ft;span></span>
+                <span>js:</span>
+                <span>Element.prototype.insertAfter = function (targetNode,afterNode){</span>
+                <span class="suojin">var beforeNode = afterNode.nextElementSibling;</span>
+                <span class="suojin">if(beforeNode == null){</span>
+                <span class="suojin2">this.appendChild(targetNode);</span>
+                <span>}else{</span>
+                <span class="suojin3">this.insertBefore(targetNode,BeforeNode);</span>
+                <span class="suojin">}</span>
+                <span>}</span>
+                <span>var div = document.getElementsByTagName('div')[0];</span>
+                <span>var b =< document.getElementsByTagName('b')[0];</span>
+                        <span>var span = document.getElementsByTagName('span')[0];</span>
+                        <span>var p = document.CreateElement("p"); </span>
+                        <span>div.insertAfter(p,span)</span>
+                        <span>在span标签后插入p
+                        </span>
+            </div>
+        </div>
+        <div class="three">
+            <h2>返回浏览器窗口尺寸</h2>
+            <div class="daima">
+                <span>function getViewprotOffset(){</span>
+                <sapn class="suojin">if(window.innerwidth){</sapn>
+                <span class="suojin">return{</span>
+                <span class="suojin3">w:Window.innerWidth,</span>
+                <span class="suojin3">h:window.innerHeight</span>
+                <span class="suojin">}</span>
+                <span class="suojin">}else{</span>
+                <span class="suojin3">if(document.ComputerMode==="BackComput"){</span>
+                <span class="suojin3">return{</span>
+                <span class="suojin3">w:document.body.clientWidth,</span>
+                <span class="suojin3">h;document.body.clintHeight</span>
+                <span class="suojn">}</span>
+                <span class="suojin">}else{</span>
+                <span class="suojin3">return{</span>
+                <span class="suojin3">w:document.documentElement.clientWidth,</span>
+                <span class="suojin3">h:document.documentElement.clinetHeight</span>
+                <span class="suojin3">}</span>
+                <span class="suojin">}</span>
+                <span>}</span>
+            </div>
+        </div>
+        <div class="four">
+            <h2>求滚轮滚动距离</h2>
+            <div class="daima">
+                <span>function getScrollOffset(){</span>
+                <span class="suojin">return{</span>
+                <span class="suojin3">x:Window.pagexOffset,</span>
+                <span class="suojin3">y:Wiindow.pageyOffset</span>
+                <span class="suojin">}</span>
+                <span class="suojin">}else{</span>
+                <span class="suojin3">return{</span>
+                <span class="suojin3">x:document.body.ScrollLeft+document.documentElement.Scrollleft,</span>
+                <span class="suojin3">y:document.body.ScrollTop+documentElement.ScrollTop</span>
+                <span class="suojin3">}</span>
+                <span class="suojin">}</span>
+                <span>}</span>
+            </div>
+        </div>
+        <div class="five">
+            <h2>addElevent</h2>
+              <!-- 封装addElevent -->
+              <div class="daima">
+                <span>function addevent (elem,type,handle){</span>
+                <span class="suojin">if(elem.addEventListener){</span>
+                <span class="suojin">elem.addEventListener(Type,handle,flash);</span>
+                <span>}else if(elem.attachEvent){</span>
+                <span class="suojin">elem.attavhEvent('on'+type.function(){</span>
+                <span class="suojjiin3">handle.call(elem);</span>
+                <span class="suojin">})</span>
+                <span class="suojin">}else{</span>
+                <span class="suojin3">elem['on'+type] = handle;</span>
+                <span class="suojijn">}</span>
+                <span>}</span>
+            </div>
+        </div>
+        <div class="stopbubble">
+            <h2>取消冒泡；</h2>
+            <ol>
+                <li>w3c标准：event.stopPropagation();但不支持ie9以下</li>
+                <li>ie独有：event.CancelBubble = true;</li>
+            </ol>
+            <!-- 封装冒泡 -->
+            <h2>封装冒泡函数：stopBubble(event)</h2>
+            <div class="daima">
+                <span>function stopBubble(event){</span>
+                <span class="suojin">if(event.stopPropagation(){</span>
+                <span class="suojin">event.stopPropagation();</span>
+                <span class="suojin">}else{</span>
+                <span class="suojin3">event.canleBubble = true;</span>
+                <span class="suojin">}</span>
+                <spa>}</span>
+            </div>
+        </div>
+          <!-- 阻止默认事件 -->
+          <div class="stopmoren">
+            <h2>阻止默认事件</h2>
+            <h3>默认事件--表单提交，a标签跳转，右键菜单等。</h3>
+            <ol>
+                <li>1.return false;以对象属性方式注册的事件才生效</li>
+                <li>2.event.preventDefault();w3c标准，ie9不兼容 </li>
+                <li>3.event.returnValue = flash;兼容ie</li>
+            </ol>
+            <!-- 封装阻止默认事件 -->
+            <h2>封装阻止默认事件的函数：CanceHandler(event)</h2>
+            <div class="daima">
+                <span>function CancelHandler (event){</span>
+                <span class="suojin">if(event.preventDefault){</span>
+                <span class="suojin">event.preventDefault();</span>
+                <sapn class="suojin">}else{</sapn>
+                <sapn class="suojin3">event.returnValue = flase</sapn>
+            </div>
+        </div>
+    </div>
+    <div class="fi">
+        <a href="index.html">点击返回首页</a>
+    </div>
+</body>
+
+</html>

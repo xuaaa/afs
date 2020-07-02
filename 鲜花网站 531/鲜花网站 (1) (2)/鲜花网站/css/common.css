@@ -1,0 +1,127 @@
+﻿
+a:hover,a:active {
+	text-decoration: none
+}
+
+a {
+	color: #2DA1E7;
+	text-decoration: none;
+	font-family: microsoft yahei;
+	font-size: 15px;
+}
+
+.header {
+	height: 44px;
+	line-height: 44px;
+	text-align: center;
+	background-color: #3cafdc
+}
+
+.header h1 {
+	width: 190px;
+	display: block;
+	margin: 0 auto;
+	font-family: microsoft yahei;
+	font-size: 18px;
+	color: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-weight: 700
+}
+
+.content {
+	background-color: #f0f0f0;
+	min-height: 180px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+article.bottom_c section {
+	padding-left: 10px;
+	padding-right: 10px;
+	height: auto;
+	background-color: #fff;
+	line-height: 49px;
+	position: relative;
+}
+
+article.bottom_c input[type="text"], article.bottom_c input[type="password"] {
+	width: 100%;
+	text-align: left;
+	outline: none;
+	box-shadow: none;
+	border: none;
+	color: #333;
+	background-color: #fff;
+	height: 20px;
+	margin-left: -5px;
+}
+
+.selectBank {
+	border: 1px solid #ccc;	
+}
+
+section span {
+	float: left;
+	padding-left: 5px
+}
+
+input::-webkit-input-placeholder {
+	color: #ccc;
+}
+
+.username {
+	background: url("../images/ico-user.png") no-repeat;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-size: cover;
+	margin: 6px -5px 0;
+}
+
+section span.fRight {
+	float: none;
+	padding-left: 12px;
+	position: relative;
+	overflow: hidden;
+	display: block;
+	height: 44px;
+	line-height: 44px;
+}
+
+.password {
+	background: url("../images/ico-password.png") no-repeat;
+	display: inline-block;
+	width: 25px;
+	height: 26px !important;
+	height: 25px;
+	background-size: cover;
+	margin: 6px -5px 0;
+}
+
+.btn {
+	width: 100%;
+	height: 40px;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 40px;
+	text-align: center;
+	font-family: microsoft yahei;
+	font-size: 18px;
+	color: #fff;
+	background: #fe932b;
+	border: none;
+	border-radius: 3px;
+	font-weight: bold;	
+}
+
+.log_ele {
+	padding: 0px 10px;
+	font-size: 15px;
+}
+
+.log_ele a:last-child {
+	float: right
+}

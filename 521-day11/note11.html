@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>note11</title>
+    <link rel="stylesheet" type="text/css" href="../css/nav.css">
+    <link rel="stylesheet" type="text/css" href="note11.css">
+</head>
+
+<body>
+    <!-- title -->
+    <div class="title">
+        <h1>第十一天笔记</h1>
+    </div>
+    <div class="wapper">
+        <div class="main">
+            <h2>原型（prototype）：</h2>
+            <h4>定义：</h4>
+            <p><span>原型是function对象的一个属性，它定义了构造函数制造出的对象的公共祖先。通过构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象</span></p>
+            <div class="lizi">
+                <div class="daima">
+                <p>//Person.prototype(原型)</p>
+                <p>//Preson.prototype&nbsp;&nbsp;=&nbsp;&nbsp;{}是祖先</p>
+                <p>function&nbsp;&nbsp;(){</p>
+                <p>}</p>
+                <p>var&nbsp;&nbsp;person&nbsp;&nbsp;=new&nbsp;&nbsp;Person();</p>
+            </div>
+                <p>在JavaScript中，每个函数都有一个prototype属性，这个属性指向函数的原型对象</p>
+                <div class="daima">
+                <p>function Person(age) {</p>
+                <p> this.age = age </p>
+                <p>}</p>
+                <p> Person.prototype.name = 'kavin'</p>
+                <p> var person1 = new Person()</p>
+                <p> var person2 = new Person()</p>
+                <p>console.log(person1.name) //kavin</p>
+                <p>console.log(person2.name) //kavin</p>
+                </div>
+                <p>函数的prototype指向了一个对象，而这个对象正是调用构造函数时创建的实例的原型，也就是person1和person2的原型。</p>
+
+                <p> 原型的概念：每一个javascript对象(除null外)创建的时候，就会与之关联另一个对象，这个对象就是我们所说的原型，每一个对象都会从原型中“继承”属性。</p>
+                <div class="tu"><img
+                        src="https://img2018.cnblogs.com/blog/850375/201907/850375-20190708151024134-512558007.png"
+                        alt="图"></div>
+            </div>
+            <div class="yingsi">
+                <h3>对象如何查看属性->隐式属性->__proto__</h3>
+                <p>这是每个对象(除null外)都会有的属性，叫做__proto__，这个属性会指向该对象的原型。</p>
+                <div class="daima">
+                <p>function Person() {</p>
+
+                <p>}</p>
+                <p> var person = new Person();</p>
+                <p>console.log(person.__proto__ === Person.prototype); // true</p>
+                </div>
+                <div class="tu"><img
+                        src="https://img2018.cnblogs.com/blog/850375/201907/850375-20190708151322530-1608157973.png"
+                        alt=""></div>
+                <p><span>绝大部分浏览器都支持这个非标准的方法访问原型，然而它并不存在于
+                        Person.prototype 中，实际上，它是来自于 Object.prototype ，与其说是一个属性，
+                        不如说是一个 getter/setter，当使用 obj.__proto__ 时，可以理解成返回了 Object.getPrototypeOf(obj)。</span></p>
+            </div>
+            <div class="gouzao">
+                <h3>对象如何查看对象函数->constructor</h3>
+                <p>每个原型都有一个constructor属性，指向该关联的构造函数。</p>
+                <div class="daima">
+                <p>function Person() {</p>
+
+                <p>}</p>
+                <p> console.log(Person===Person.prototype.constructor) //true</p>
+                </div>
+                <div class="tu"> <img
+                        src="https://img2018.cnblogs.com/blog/850375/201907/850375-20190708151615691-1017611190.png"
+                        alt=""></div>
+                        <div class="daima">
+                <p>function Person() {</p>
+
+                <p> }</p>
+
+                <p> var person = new Person();</p>
+
+                <p> console.log(person.__proto__ == Person.prototype) // true</p>
+                <p> console.log(Person.prototype.constructor == Person) // true</p>
+                <p> // 顺便学习一个ES5的方法,可以获得对象的原型</p>
+                <p> console.log(Object.getPrototypeOf(person) === Person.prototype) // true</p>
+                </div>
+                <p>补充说明：</p>
+                <div class="daima">
+                <p>function Person() {</p>
+
+                <p>}</p>
+                <p> var person = new Person();</p>
+                <p> console.log(person.constructor === Person); // true</p>
+                </div>
+                <p>当获取 person.constructor 时，其实 person 中并没有 constructor 属性,当不能读取到constructor 属性时，会从 person 的原型也就是
+                    Person.prototype 中读取，正好原型中有该属性，所以：</p>
+                    <div class="daima">
+                <p>person.constructor === Person.prototype.constructor</p>
+                </div>
+            </div>
+
+            <div class="shili">
+                <h3>实例与原型：</h3>
+                <p>当读取实例的属性时，如果找不到，就会查找与对象关联的原型中的属性，如果还查不到，就去找原型的原型，一直找到最顶层为止。</p>
+                <div class="daima">
+                <p>function Person() {</p>
+
+                <p> }</p>
+
+                <p> Person.prototype.name = 'Kevin';</p>
+
+                <p> var person = new Person();</p>
+
+                <p> person.name = 'Daisy';</p>
+                <p>console.log(person.name) // Daisy</p>
+
+                <p>delete person.name;</p>
+                <p>console.log(person.name) // Kevin</p>
+                </div>
+                <span>我们给实例对象 person 添加了 name 属性，当我们打印 person.name 的时候，结果自然为 Daisy。
+
+                    但是当我们删除了 person 的 name 属性时，读取 person.name，从 person 对象中找不到 name 属性就会从 person 的原型也就是 person.__proto__
+                    ，也就是 Person.prototype中查找，幸运的是我们找到了 name 属性，结果为 Kevin。</span>
+                我们给实例对象 person 添加了 name 属性，当我们打印 person.name 的时候，结果自然为 Daisy。
+
+            </div>
+            <div class="yunxinde">
+                <h3>原型的原型：</h3>
+                <div class="daima">
+                <p> var obj = new Object();</p>
+                <p>obj.name = 'Kevin'</p>
+                <p>console.log(obj.name) // Kevin</p>
+                </div>
+                <p>原型对象就是通过 Object 构造函数生成的，结合之前所讲，实例的 __proto__ 指向构造函数的 prototype </p>
+                <div class="tu"><img
+                        src="https://img2018.cnblogs.com/blog/850375/201907/850375-20190708151615691-1017611190.png"
+                        alt=""></div>
+            </div>
+            <div class="yuanxinglian">
+                <h3>原型链：</h3>
+                <h5>一个原型是另一个的原型，层层递进</h5>
+                <p><span>每个构造函数都有一个原型对象，原型对象都包含一个指向构造函数的指针，而实例都包含一个指向原型对象的内部指针。那么假如我们让原型对象等于另一个类型的实例，结果会怎样？显然，此时的原型对象将包含一个指向另一个原型的指针，相应地，另一个原型中也包含着一个指向另一个构造函数的指针。
+                        假如另一个原型又是另一个类型的实例，那么上述关系依然成立。如此层层递进，就构成了实例与原型的链条。这就是所谓的原型链的基本概念</span></p>
+                       <h4> Object.prototype 的原型</h4>
+                <p>console.log(Object.prototype.__proto__ === null) // true</p>
+                <p>null 表示“没有对象”，即该处不应该有值。</p>
+                <p>所以 Object.prototype.__proto__ 的值为 null 跟 Object.prototype 没有原型</p>
+                <p>所以查找属性的时候查到 Object.prototype 就可以停止查找了。</p>
+                <div class="tu"><img
+                        src="https://img2018.cnblogs.com/blog/850375/201907/850375-20190708153139577-2105652554.png"
+                        alt="">
+                </div>
+            </div>
+            <p>图中由相互关联的原型组成的链状结构就是原型链，也就是蓝色的这条线</p>
+            <p>绝大多数的对象最终会继承自Object.protoype</p>
+            <h4>Object.create的原型</h4>
+            <div class="daima">
+            <p>var&nbsp;&nbsp;obj&nbsp;&nbsp;=&nbsp;&nbsp;Object.create(原型)//
+            </p>
+            <p>
+                var&nbsp;&nbsp;obj&nbsp;&nbsp;={name&nbsp;&nbsp;:"sunny"，age&nbsp;&nbsp;:123};
+            </p>
+            <p>var&nbsp;&nbsp;obj1&nbsp;&nbsp;=&nbsp;&nbsp;Object.create(obj);</p>
+            </div>
+        </div>
+        <div class="call">
+            <h3>call/apply</h3>
+            <h5>作用：改变this指向。区别：传参列表不同</h5>
+            <div class="daima">
+            <p>function&nbsp;&nbsp;Person(name,age){</p>
+            <p>
+                this.name&nbsp;&nbsp;=&nbsp;&nbsp;name;
+            </p>
+            <p>this.sge&nbsp;&nbsp;=&nbsp;&nbsp;age;</p>
+            <p>}</p>
+            <p>var&nbsp;&nbsp;person&nbsp;&nbsp;=&nbsp;new&nbsp;&nbsp;Person('deng',100);</p>
+            <p>var&nbsp;&nbsp;obj&nbsp;&nbsp;={</p>
+            <P>}</P>
+            <p>Person.call(obj);</p>
+            <p>//test-->test.call();</p>
+            </div>
+        </div>
+    </div>
+    <!-- nav -->
+    <div class="fixnav">
+        <div class="fixnav-wapper">
+            <div class="fixtit">
+                <h3 class="fixtitle">学习笔记</h3>
+            </div>
+            <ul>
+                <li><a href="../521-day1/笔记.html">第一天</a></li>
+                <li><a href="../521-day2/笔记2.HTML">第二天</a></li>
+                <li><a href="../521-day3/笔记3.html">第三天</a></li>
+                <li><a href="../521-day4/笔记4.html">第四天</a></li>
+                <li><a href="../521-day5/note5.html">第五天</a></li>
+                <li><a href="../521-day6/note6.html">第六天</a></li>
+                <li><a href="../521-day7/note7.html">第七天</a></li>
+                <li><a href="../521-day8/note8.html">第八天</a></li>
+                <li><a href="../521-day9/note9.html">第九天</a></li>
+                <li><a href="../521-day10/note10.html">第十天</a></li>
+                <li><a href="../521-day11/note11.html">第十一天</a></li>
+                <li><a href="../521-day12/note12.html">第十二天</a></li>
+                <li><a href="../521-day13/note13.html">第十三天</a></li>
+                <li><a href="../521-day14/note14.html">第十四天</a></li>
+                <li><a href="../521-day15/note15.html">第十五天</a></li>
+                <li><a href="../521-day16/note16.html">第十六天</a></li>
+
+                <li><a href="../521-day17/note17.html">第十七天</a></li>
+                <li><a href="../521-day18/note18.html">第十八天</a></li>
+                <li><a href="../521-day19/note19.html">第十九天</a></li>
+                <li><a href="../521-day20/note20.html">第二十天</a></li>
+                <li><a href="../521-day21/note21.html">第二十一天</a></li>
+                <li><a href="../521-day22/note22.html">第二十二天</a></li>
+
+            </ul>
+        </div>
+</body>
+
+</html>

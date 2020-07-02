@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  color: #424242;
+}
+em{
+    list-style: none;
+    color: #f00;
+}
+a,  
+li {
+  list-style: none;
+  text-decoration: none;
+  
+}
+/* 标题 */
+.top {
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 45%;
+}
+#toptext {
+  font-size: 35px;
+}
+/* 导航 */
+.topnav{
+    margin-top: 20px;
+    width: 1300px;
+    height: 60px;
+    margin-left: 150px;
+    background-color: rgba(241, 237, 234, 0.966);
+}
+.topnavt{
+    position: relative;
+    width: 900px;
+    height: 60px;
+}
+.topnavt ul{
+    position: absolute;
+    float: left;
+}
+.topnavt ul li{
+    float: left;
+    padding: 10px;
+    line-height: 40px;
+    margin-left: 100px;
+    color: #000;
+}
+.topnavt ul li a{
+  
+    font-weight: bold;
+    
+    
+
+}
+.topnavt ul li:hover{
+    color: #fff;
+    cursor: pointer;
+    background-color: #f00;
+    padding: 20px;
+}
+/* 外层 */
+.wapper {
+  width: 1100px;
+  margin-left: 250px;
+  padding: 0 10px;
+  background-color: cornsilk;
+}
+/* 解决浮动流，用伪元素 */
+.float {
+  margin-top: 70px;
+  height: 70px;
+}
+.wapper .flt {
+  font-size: 25px;
+  font-weight: bold;
+}
+.wapper .fft {
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size: 15px;
+}
+.fdl {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.wrapper {
+  margin-top: 30px;
+  border: 1px solid black;
+}
+.content {
+  float: left;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  background-color: #000;
+}
+.wrapper::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.fdlj {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.bm {
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 400px;
+}
+.bc {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+.help {
+  position: relative;
+  margin-left: 30px;
+  width: 400px;
+}
+.help p {
+  margin-top: 20px;
+}
+.help.span {
+  display: block;
+  margin-top: 30px;
+  margin-left: 60px;
+}
+.help span::before {
+  float: left;
+  content: "我在前面";
+  display: block;
+}
+.help span::after {
+  content: "我在后面";
+  display: block;
+  float: right;
+  margin-right: 800px;
+}
+.weilei3 {
+  float: right;
+  width: 200px;
+  margin-top: 50px;
+  margin-right: 450px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.weilei3 p {
+  margin-left: 30px;
+  font-weight: normal;
+  font-size: 16px;
+  margin-top: 15px;
+}
+/* 三栏布局 */
+.three {
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 750px;
+  width: 300px;
+  height: 150px;
+  text-indent: 0;
+}
+/* 淘宝导航栏 */
+.nav{
+    background-color:rgb(255, 131, 0);
+    height: 40px;
+    margin-top: 30PX;
+    position: relative;
+margin-top: 30px;
+}
+.nav-top{
+    float: left;
+    position: absolute;
+
+}
+.nav p{
+    float: left;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #f00;
+    border-right: 4px soid #f00
+}
+.nav-top ul{
+    float: left;
+    width: 240px;
+}
+
+.nav-top li{
+    position: relative;
+    float: left;
+    margin: 1px;
+    margin-left:20px;
+}
+.nav-top li a{
+    line-height: 40px;
+    color: #fff;
+}
+#tbnav{
+    float: left;
+    width: 390px;
+}
+.fenge{
+    color: #fff;
+    line-height: 40px;
+}
+#tbnav a{
+    font-size: 14px;
+}
+#lastnav{
+    width: 300px;
+font-size: 13px;
+}
+.nav a:hover{
+    padding:3px;
+}
+/* 溢出问题 */
+.full{
+    margin-left: 30px;
+    height: 600px;
+}
+.full p{
+    margin-top: 30px;
+    margin-left: 100px;
+}
+/* 底部 */
+.fater{
+    position: relative;
+    margin-top: 100px;
+    height: 300px;
+    background-color: #7977779a;
+}
+.ft{
+    margin-left: 200px;
+}
+.ft p {
+    position: absolute;
+    margin-top:50px;
+    font-size: 30px;
+}
+.ft span
+{
+    position: absolute;
+    margin-top: 200px;
+ 
+}

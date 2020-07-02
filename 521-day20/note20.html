@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>note20</title>
+    <link rel="stylesheet" type="text/css" href="note20.css">
+    <link rel="stylesheet" type="text/css" href="../css/nav.css">
+</head>
+
+<body>
+    <!-- title -->
+    <div class="title">
+        <div class="tit">
+            <h1>第二十天笔记</h1>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="wapper">
+        <div class="main">
+            <div class="shijian">
+                <h1>事件</h1>
+                <h2>绑定事件</h2>
+                <ol>
+                    <li>
+                        <h3>ele.onclick = function(){}</h3>
+                        <p>on+事件类型=function（event）{}</p>
+                        <p>兼容性很好，但一个元素的同一个事件上只能绑定一个处理，基于等同于写在HTMl行间上</p>
+                    </li>
+                    <li>
+                        <h3>obj.addEventListener(type.fn,flash)</h3>
+                        <p>ie9以下不兼容，可以为一个事件绑定多个处理。</p>
+                        <div class="daima">
+                            <span>div.addEventListener('click',function(){</span>
+                            <span class="suojin">console.log('a');</span>
+                            <span>},flash);</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>obj.attachEvent('on'+type,fn);</h3>
+                        <p>ie独有，一个事件同样可以绑定多个处理程序</p>
+                        <div class="daima">
+                            <span>div.attEvent('on+事件'，function（）{});</span>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <!--处理运行环境  -->
+            <div class="shijianyunxing">
+                <h2>事件处理运行环境</h2>
+                <ol>
+                    <li>
+                        <h3>ele.onxxx = function(event){}</h3>
+                        <p>程序this指向的dom元素本身</p>
+                    </li>
+                    <li>
+                        <h3>obj.addEventListener(type,fn,flash);</h3>
+                        <p>
+                            程序this指向dom元素本身
+                        </p>
+                    </li>
+                    <li>
+                        <h3>obj.attachEvent(on+type,fn);</h3>
+                        <p>程序指向Window</p>
+                    </li>
+                    <li>封装兼容addevent</li>
+                </ol>
+                <!-- 封装addElevent -->
+                <div class="daima">
+                    <span>function addevent (elem,type,handle){</span>
+                    <span class="suojin">if(elem.addEventListener){</span>
+                    <span class="suojin">elem.addEventListener(Type,handle,flash);</span>
+                    <span>}else if(elem.attachEvent){</span>
+                    <span class="suojin">elem.attavhEvent('on'+type.function(){</span>
+                    <span class="suojjiin3">handle.call(elem);</span>
+                    <span class="suojin">})</span>
+                    <span class="suojin">}else{</span>
+                    <span class="suojin3">elem['on'+type] = handle;</span>
+                    <span class="suojijn">}</span>
+                    <span>}</span>
+                </div>
+                <h2>解除事件</h2>
+                <ol>
+                    <li>ele.onclick = false/""/null;</li>
+                    <li>ele.removeEventListener(type,fn,flash);</li>
+                    <li>ele.deetachEvent('on'+type,fn);</li>
+                    <p>注：若绑定匿名函数，则无法解除</p>
+                </ol>
+            </div>
+            <!-- 事件处理模型 -->
+            <div class="chulimodle">
+                <h2>事件冒泡</h2>
+                <p>结构上嵌套关系的元素，会存在事件，冒泡的功能，即同一事件，自子元素冒泡向父元素</p>
+                <h2>事件捕获</h2>
+                <p>结构上（非视角）嵌套关系的元素，会存在事件捕获的功能，即同一事件，自元素捕获至子元素（ie没有捕获事件）</p>
+                <p>触发顺序，先捕获，后冒泡。</p>
+                <p>focus,blur,change,submit,reset,select等事件不冒泡。</p>
+            </div>
+            <!-- 取消冒泡 -->
+            <div class="stopbubble">
+                <h2>取消冒泡；</h2>
+                <ol>
+                    <li>w3c标准：event.stopPropagation();但不支持ie9以下</li>
+                    <li>ie独有：event.CancelBubble = true;</li>
+                </ol>
+                <!-- 封装冒泡 -->
+                <h2>封装冒泡函数：stopBubble(event)</h2>
+                <div class="daima">
+                    <span>function stopBubble(event){</span>
+                    <span class="suojin">if(event.stopPropagation(){</span>
+                    <span class="suojin">event.stopPropagation();</span>
+                    <span class="suojin">}else{</span>
+                    <span class="suojin3">event.canleBubble = true;</span>
+                    <span class="suojin">}</span>
+                    <spa>}</span>
+                </div>
+            </div>
+            <!-- 阻止默认事件 -->
+            <div class="stopmoren">
+                <h2>阻止默认事件</h2>
+                <h3>默认事件--表单提交，a标签跳转，右键菜单等。</h3>
+                <ol>
+                    <li>1.return false;以对象属性方式注册的事件才生效</li>
+                    <li>2.event.preventDefault();w3c标准，ie9不兼容 </li>
+                    <li>3.event.returnValue = flash;兼容ie</li>
+                </ol>
+                <!-- 封装阻止默认事件 -->
+                <h2>封装阻止默认事件的函数：CanceHandler(event)</h2>
+                <div class="daima">
+                    <span>function CancelHandler (event){</span>
+                    <span class="suojin">if(event.preventDefault){</span>
+                    <span class="suojin">event.preventDefault();</span>
+                    <sapn class="suojin">}else{</sapn>
+                    <sapn class="suojin3">event.returnValue = flase</sapn>
+                </div>
+            </div>
+            <!-- 事件对象 -->
+            <div class="shijianobject">
+                <h2>事件对象：</h2>
+                <h3>event || Window.event 用于ie</h3>
+                <h3>事件对象：</h3>
+                <ol>
+                    <li>1.event.target 火狐只有这一个</li>
+                    <li>2.event.srcElement ie只有这个</li>
+
+                    <li>chrom这两个都有</li>
+                </ol>
+            </div>
+            <!--事件分类 -->
+            <div class="shijanfenlei">
+                <h2>事件分类</h2>
+                <h3>鼠标事件：</h3>
+                <span class="shijansp">click，mousedoum,mousemove,mouseup,contextmenu,mouseover,mouseout,mouseenter,mouseleave</span>
+                <h4>用button来区分鼠标按键，0/1/2</h4>
+                <h4>DOM3标准规定：click事件只能监听左键。只能通过mousedoum和mouseup来判断鼠标键</h4>
+                <h4>解决mousedown和click冲突</h4>
+                
+                <div class="daima">
+                    <p>拖拽：</p>
+                    <span>var fristtime = 0;</span>
+                    <span>var lastTime = 0;</span>
+                    <span>var key = flase;</span>
+                    <span>document.onmousedown = function (){</span>
+                    <span class="suojin">fristTime = new Date().getTime();</span>
+                    <span>}</span>
+                    <span>document.onmouseup = function(){</span>
+                    <span class="suojin">lastTime = new Date.()getTime;</span>
+                    <span class="suojin">if(lastTime - fristTime < 300){</span>
+                            <span class="suojin3">key = true;</span>
+                            <span class="suojin">}</span>
+                            <span>}</span>
+                            <span>document.onclick = function (){</span>
+                            <span class="suojin">if(key){</span>
+                            <span class="suojin">console.log('click');</span>
+                            <span class="suojin">}</span <span>}</span>
+                </div>
+                <h3>键盘事件</h3>
+                <ol>
+                    <li>keydown ,keyup , keypress</li>
+                    <li>keydown > keypress > keyup</li>
+                    <li>keydow和keypree区别 </li>
+                    <p>keydown可以响应任意键盘按键，keypree只可以响应字符类键盘按键</p>
+                    <p>keypree赶回ASCLL码，可以转换为相应字符</p>
+                </ol>
+                <h3>文本类操作事件</h3>
+                <div class="daima">
+                    <span>&fl;input type="text"></span>
+                    <span>var input = documen.getElementsByTagName('input)[0];</span>
+                    <span class="suojin">input.onclick = function(e){</span>
+                    <span class="suoji8n3">console.log(this.value);</span>
+                    <span>}</span>
+                </div>
+                <h3>窗体操作类：（Window上的事件）</h3>
+                <p>Scroll load</p>
+            </div>
+        </div>
+    </div>
+    <!-- nav -->
+    <div class="fixnav">
+        <div class="fixnav-wapper">
+            <div class="fixtit">
+                <h3 class="fixtitle">学习笔记</h3>
+            </div>
+            <ul>
+                <li><a href="../521-day1/笔记.html">第一天</a></li>
+                <li><a href="../521-day2/笔记2.HTML">第二天</a></li>
+                <li><a href="../521-day3/笔记3.html">第三天</a></li>
+                <li><a href="../521-day4/笔记4.html">第四天</a></li>
+                <li><a href="../521-day5/note5.html">第五天</a></li>
+                <li><a href="../521-day6/note6.html">第六天</a></li>
+                <li><a href="../521-day7/note7.html">第七天</a></li>
+                <li><a href="../521-day8/note8.html">第八天</a></li>
+                <li><a href="../521-day9/note9.html">第九天</a></li>
+                <li><a href="../521-day10/note10.html">第十天</a></li>
+                <li><a href="../521-day11/note11.html">第十一天</a></li>
+                <li><a href="../521-day12/note12.html">第十二天</a></li>
+                <li><a href="../521-day13/note13.html">第十三天</a></li>
+                <li><a href="../521-day14/note14.html">第十四天</a></li>
+                <li><a href="../521-day15/note15.html">第十五天</a></li>
+                <li><a href="../521-day16/note16.html">第十六天</a></li>
+                <li><a href="../521-day17/note17.html">第十七天</a></li>
+                <li><a href="../521-day18/note18.html">第十八天</a></li>
+                <li><a href="../521-day19/note19.html">第十九天</a></li>
+                <li><a href="../521-day20/note20.html">第二十天</a></li>
+
+
+
+
+            </ul>
+        </div>
+</body>
+
+</html>

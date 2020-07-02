@@ -1,0 +1,208 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>521day1note</title>
+    <link rel="stylesheet" type="text/css" href="笔记.css" />
+    <link rel="stylesheet" type="text/css" href="../css/nav.css" />
+</head>
+
+<body>
+    <div class="wannerp">
+
+        <div id="top">
+            <h1>第一天笔记</h1>
+            <ul class="ht">
+                <li class="jcb"><a href="#c1">HTML基础标签</a></li>
+                <li><a href="#c2">有序列表</a></li>
+                <li><a href="#c4">无序列表</a></li>
+                <li><a href="#c3">img 标签</a></li>
+                <li><a href="#c5">form 标签</a></li>
+            </ul>
+            <div class="main-wapper">
+                <div class="main">
+                    <div class="zf">
+                        <h2 class="bt">HTML:&nbsp;&nbsp;&nbsp;&nbsp;超文本语言</h2>
+                        <h2 id="ziif">字符集</h2>
+                        <span>gb2312为中国标准，gbk为中国标准拓展版，Unicode为万国码，utf-8为常用字符集</span>
+                    </div>
+                    <div class="jc">
+                        <h2><a name="c1">基础标签</a>：</h2>
+                        <h4>div 标签</h4>
+                        <span>
+                            <p>定义和用法</p>
+                            <div class="wd"> &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv> 可定义文档中的分区或节（division/section）。 &ltdiv>
+                                标签可以把文档分割为独立的、不同的部分。它可以用作严格的组织工具，并且不使用任何格式与其关联。如果用 id 或 class 来标记
+                                &ltdiv>，那么该标签的作用会变得更加有效。
+                            </div>
+                            <p>用法</p>
+                            <div class="wd">&nbsp;&nbsp;&nbsp;&nbsp; &ltdiv> 是一个块级元素。这意味着它的内容自动地开始一个新行。实际上，换行是 &ltdiv>
+                                固有的唯一格式表现。可以通过 &ltdiv> 的
+                                class 或 id
+                                应用额外的样式。不必为每一个 &ltdiv> 都加上类或 id，虽然这样做也有一定的好处。 可以对同一个 &ltdiv> 元素应用 class 或 id
+                                属性，但是更常见的情况是只应用其中一种。这两者的主要差异是，class
+                                用于元素组（类似的元素，或者可以理解为某一类元素），而 id 用于标识单独的唯一的元素。</div>
+                            <p>提示和注释：</p>
+                            <p>注释:&nbsp;&nbsp;&nbsp;&ltdiv> 是一个块级元素，也就是说，浏览器通常会在 div 元素前后放置一个换行符。</p>
+                            <p>提示：请使用 &ltdiv> 元素来组合块级元素，这样就可以使用样式对它们进行格式化。</p>
+                        </span>
+                        <div class="sp">
+                            这是一条水平线(&lthr>)
+                            <hr>
+                            这句话会被<br>换行(&ltbr>)
+                            <p class="hh">
+                                这是一条分割线
+                                <hr>
+                            </p>
+                        </div>
+                        <div class="lb">
+                            <h3><a name="c2">有序列表</a></h3>
+                            <ol type="I">
+                                <li>这是第一个</li>
+                                <li>这是第二个</li>
+                                <li>这是第三个</li>
+                            </ol>
+                            <h3><a name="c4">无序列表</a></h3>
+                            <ul type="circle">
+                                <li>水果</li>
+                                <li>蔬菜</li>
+                                <li>米饭</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="img1">
+                    <div class="mg">
+                        <h2><a name="c3">img标签</a></h2>
+                        <ol type="1">
+                            <li>网上URL</li>
+                            <img src="https://i0.hdslb.com/bfs/article/9f1a6a6c0134ab05d01d68a8719886d45dd811b8.jpg@1320w_742h.jpg"
+                                width="300px" height="200px">
+                            <li>本地绝对路径(本地不在同一文件夹下）</li>
+                            <li>相对路径（在同一路径下）</li>
+                        </ol>
+                        <h3>超链接：</h3>
+                        <ol type="1">
+                            <li>&lta herf="xxxx"><a
+                                    href="https://i0.hdslb.com/bfs/article/9f1a6a6c0134ab05d01d68a8719886d45dd811b8.jpg@1320w_742h.jpg"
+                                    target="_blank">这是一个连接</a>&lt/a></li>
+                            <li> target="_blank"新窗口打开。</li>
+                            <li>打电话：&lta herf="tel:138xxxx1234">给谁打电话&lt/a></li>
+                            <li> 发邮件：&lta herf="mailto:xxxx">给谁发邮件&lt/a></li>
+                            <li> 协议限定符：&lta herf="javascript:xxx">执行Javascript命令&lt/a><a href="j1.html"
+                                    target="_blank">点击跳转显示</a></li>
+                        </ol>
+
+                    </div>
+                    <div class="fr">
+                        <h2><a name="c5">form标签</a></h2>
+                        <span>发送数据</span>
+                        <from>
+                            <p>
+                                用户名： <input type="text" name="username" style="color: #999;" value="请输入用户名"
+                                    onfocus="if(this.value=='请输入用户名'){this.value='';this.style.color='#424242'}"
+                                    onblur="if(this.value==''){this.value = '请输入用户名';this.style.style.color='#999'}">
+                            </p>
+                            <p>
+                                密码：<input type="password" name="password" style="color: #999;" value="请输入密码"
+                                    onfocus="if(this.value=='请输入密码'){this.value='';this.style.color='#424242'}"
+                                    onblur="if(this.value==''){this.value = '请输入密码';this.style.style.color='#999'}">
+                            </p>
+                            <p>
+                                <input type="submit" value="提交">
+                            </p>
+                        </from>
+                        <div class="bm">
+                            <p> 以上编码</p>
+                            <p> &ltfrom></p>
+                            <p> &ltp></p>
+                            <p>用户名： &ltinput type="text" name="username" style="color: #999;" value="请输入用户名"</p>
+                            <p> onfocus="if(this.value=='请输入用户名'){this.value='';this.style.color='#424242'}"</p>
+                            <p> onblur="if(this.value==''){this.value = '请输入用户名';this.style.style.color='#999'}"></p>
+                            <p> &lt/p></p>
+                            <p> &ltp></p>
+                            <p> 密码：&ltinput type="password" name="password" style="color: #999;" value="请输入密码"</p>
+                            <p> onfocus="if(this.value=='请输入密码'){this.value='';this.style.color='#424242'}"</p>
+                            <p> onblur="if(this.value==''){this.value = '请输入密码';this.style.style.color='#999'}"></p>
+                            <p> &lt/p></p>
+                            <p> &ltp></p>
+                            <p> &ltinput type="submit" value="提交"></p>
+                            <p> &lt/p></p>
+                            <p> &lt/from>
+                        </div>
+                    </div>
+                    <div class="cs1">
+                        <h2>css基础</h2>
+                        <ul class="ca">
+                            <li><a herf="#b1">引用css</a></li>
+                            <li><a herf="#b2">css选择器</a></li>
+                            <li><a herf="#b3">css权重</a></li>
+                        </ul>
+                        <h3><a name="b1">引用css</a></h3>
+                        <ol type="1" class="yy">
+                            <li>行间样式</li>
+                            <img src="笔记img/行间.png">
+                            <li>页面级css</li>
+                            <img src="笔记img/页面.png" width="300px" height="200px">
+                            <li>外部css文件</a></li>
+
+                        </ol>
+                        <h2><a name="b2">css选择器</a></h2>
+                        <ol type="1" class="xz">
+                            <li>id选择器（一个只能有一个元素，选中为#+id）</li>
+
+                            <li>clss选择器（多对多，.+class）</li>
+
+                            <li>标签选择器</li>
+                            <li>通配符（*）</li>
+                            <li>父子选择器—（父子关系成立即可）</li>
+                            <li>并列选择器和分组（如：div.deom）</li>
+                            <img src="笔记img/并列.jpg" width="300px" height="200px">
+                        </ol>
+                        <h3><a name="b3">css权重：</a></h3>
+                        <p class="qz"><img src="笔记img/权重.jpg" width="300px" height="200px"></p>
+                        <h4>常见字体css</h4>
+                        <p class="zic"><img src="笔记img/字体.jpg" width="300px" height="200px"></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- nav -->
+        <div class="fixnav">
+            <div class="fixnav-wapper">
+                <div class="fixtit">
+                    <h3 class="fixtitle">学习笔记</h3>
+                </div>
+                <ul>
+                    <li><a href="../521-day1/笔记.html">第一天</a></li>
+                    <li><a href="../521-day2/笔记2.HTML">第二天</a></li>
+                    <li><a href="../521-day3/笔记3.html">第三天</a></li>
+                    <li><a href="../521-day4/笔记4.html">第四天</a></li>
+                    <li><a href="../521-day5/note5.html">第五天</a></li>
+                    <li><a href="../521-day6/note6.html">第六天</a></li>
+                    <li><a href="../521-day7/note7.html">第七天</a></li>
+                    <li><a href="../521-day8/note8.html">第八天</a></li>
+                    <li><a href="../521-day9/note9.html">第九天</a></li>
+                    <li><a href="../521-day10/note10.html">第十天</a></li>
+                    <li><a href="../521-day11/note11.html">第十一天</a></li>
+                    <li><a href="../521-day12/note12.html">第十二天</a></li>
+                    <li><a href="../521-day13/note13.html">第十三天</a></li>
+                    <li><a href="../521-day14/note14.html">第十四天</a></li>
+                    <li><a href="../521-day15/note15.html">第十五天</a></li>
+                    <li><a href="../521-day16/note16.html">第十六天</a></li>
+
+                    <li><a href="../521-day17/note17.html">第十七天</a></li>
+                    <li><a href="../521-day18/note18.html">第十八天</a></li>
+                    <li><a href="../521-day19/note19.html">第十九天</a></li>
+                    <li><a href="../521-day20/note20.html">第二十天</a></li>
+                    <li><a href="../521-day21/note21.html">第二十一天</a></li>
+                    <li><a href="../521-day22/note22.html">第二十二天</a></li>
+                </ul>
+
+            </div>
+</body>
+
+</html>

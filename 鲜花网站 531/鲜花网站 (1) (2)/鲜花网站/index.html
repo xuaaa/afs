@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>每日鲜花</title>
+    <link type="text/css" rel="stylesheet" href="dingbu.css">
+    <link rel="stylesheet" type="text/css" href="style.css" top_wrap">
+
+</head>
+
+<body class="home">
+    <a href="红包.html" target="_blank" id="topbanner">
+        <img src="../鲜花网站/images/dianji.jpg" width="100%" ;>
+    </a>
+    <!-- 顶部导航 -->
+    <div class="top-nav">
+        <div class="top-nav-wrapper">
+            <ul class="top-nav-1">
+                <li class="menu">
+                    <a href="####">
+                        <h4 onclick="this.innerHTML = '已保存'">收藏鲜花网（鲜花.com)</h4>
+                    </a>
+
+                </li>
+                <li class="menu menu-dropdown">
+
+                    <p onmouseover="over()" onmouseout="out()">关注微信 </p>
+                    <img src="../鲜花网站/images/二维码.jpg" style="display:none" width="150px" id="img" />
+
+                </li>
+            </ul>
+            <ul class="top-nav-r">
+                <!--登陆状态信息显示start-->
+                <li class="menu login" id="LoginInfo"><a href="登陆.html" rel="nofollow">你好，请登录</a><a href="注册.html"
+                        rel="nofollow">注册</a></li>
+                <!--登陆状态信息显示end-->
+                <li class="menu">
+                    <a href="/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+                </li>
+                <li class="menu menu-dropdown">
+                    <a href="/h" target="_blank">客户服务</a>
+                    <div class="dropdown-box dropdown-box-service">
+                        <a href="/" target="_blank">在线付款</a>
+                        <a href="/" target="_blank">帮助中心</a>
+                        <a href="/" target="_blank">售后服务</a>
+                        <a href="/" target="_blank">配送范围</a>
+                        <a href="/" target="_blank">留言反馈</a>
+                    </div>
+                </li>
+                <!--购物车信息显示start-->
+                <li class="menu">
+                    <a href="/shopping/showcart/" rel="nofollow" target="_blank">
+                        购物车
+                        <span class="text-primary" id="gwcCount">(0)</span>
+                    </a>
+                </li>
+                <!--购物车信息显示end-->
+                <li class="menu slogan">
+                    鲜花网，一个你值得信赖的地方！
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <!-- 头部 -->
+    <div id="header" class="clearfix">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/" class="logo-nav"><img src="../鲜花网站/images/logo.jpg"></a>
+            </div>
+            <div class="search-box">
+                <form name="i_search" method="get" action="/search/">
+                    <div class="search-box-group">
+                        <div class="search-box-icon">
+                            <span class="icon icon-search"></span>
+                        </div>
+                        <input name="keyword" type="text" class="search-box-input" placeholder="商品搜索">
+                        <span class="search-box-btn">
+                            <button class="btn btn-primary" type="button" onclick="this.form.submit()">搜索</button>
+                        </span>
+                    </div>
+                </form>
+                <div class="search-box-hotwords">
+
+                    <a href="../鲜花网站/hongmeigui.html" target="_blank">红玫瑰</a><a href="../鲜花网站/yongshenghua.html"
+                        target="_blank">永生花</a><a href="/" target="_blank">生日鲜花</a><a href="/" target="_blank">礼品卡</a>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!--头部-->
+    <div class="header_wrap">
+        <div class="header">
+            <a href="index.html" class="logo">
+                <h1>鲜花分类</h1>
+            </a>
+            <div class="nav_list">
+                <ul id="nav" class="nav clearfix">
+                    <li class="nLi" style="display: none;"></li>
+                    <li class="nLi">
+                        <h3><a href="about.html">鲜花</a></h3>
+                        <ul class="sub">
+                            <li><a href="about.html">爱情鲜花</a></li>
+                            <li><a href="about.html">生日鲜花</a></li>
+                        </ul>
+                    </li>
+                    <li class="nLi">
+                        <h3><a href="teachers.html">永生花</a></h3>
+                        <ul class="sub">
+                            <li><a href="teachers.html">永生瓶花</a></li>
+                            <li><a href="technology.html">永生花盒</a></li>
+                        </ul>
+                    </li>
+                    <li class="nLi">
+                        <h3><a href="../鲜花网站/花语.html">花语大全</a></h3>
+                        <ul class="sub">
+                            <li><a href="https://www.52zzl.com/daquan/meigui/1821.html">玫瑰花语</a></li>
+                            <li><a
+                                    href="https://www.52zzl.com/plus/search.php?q=%E7%99%BE%E5%90%88&Submit22=%E6%90%9C%E7%B4%A2">百合花语</a>
+                            </li>
+                            <li><a href="https://www.52zzl.com/daquan/kangnaixin/">其他花语</a></li>
+                        </ul>
+                    </li>
+                    <li class="nLi">
+                        <h3><a href="serve.html">企业团购</a></h3>
+                        <ul class="sub">
+                            <li><a href="serve.html">选择分类</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nLi">
+                        <h3><a href="resource.html">礼品/包装</a></h3>
+                        <ul class="sub">
+                            <li><a href="resource.html">小吃类</a></li>
+                            <li><a href="resource.html">贺卡</a></li>
+                            <li><a href="resource.html">其他</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!--轮播-->
+    <div class="banner">
+        <div class="bd">
+            <ul>
+                <li class="first"><a href="javascript:void(0);"></a></li>
+                <li class="second"><a href="javascript:void(0);"></a></li>
+                <li class="third"><a href="javascript:void(0);"></a></li>
+                <li class="fourth"><a href="javascript:void(0);"></a></li>
+                <li class="fifth"><a href="javascript:void(0);"></a></li>
+            </ul>
+        </div>
+        <div class="hd">
+            <ul></ul>
+        </div>
+    </div>
+    <!--轮播end-->
+    </div>
+    <div class="content">
+        <div class="left_tab">
+            <div class="hd">
+                <ul>
+                    <li class="first">鲜花</li>
+                    <li class="second">永生花</li>
+
+                </ul>
+            </div>
+            <div class="bd">
+                <div class="box">
+                    <ul class="clearfix">
+                        <li><a href="about1.html"><img src="../鲜花网站/花/蔷薇2.jpg" />
+                                <h4>蔷薇</h4><span class="date">2020-05-05</span>
+                            </a></li>
+                        <li><a href="about1.html"><img src="../鲜花网站/花/兰花2.jpg" />
+                                <h4>兰花</h4><span class="date">2020-05-05</span>
+                            </a></li>
+                        <li><a href="about1.html"><img src="../鲜花网站/花/康乃馨2.jpg" />
+                                <h4>康乃馨</h4><span class="date">2020-05-05</span>
+                            </a></li>
+                        <li><a href="about1.html"><img src="../鲜花网站/花/牡丹.jpg" />
+                                <h4>牡丹</h4><span class="date">2020-05-05</span>
+                            </a></li>
+                        <li><a href="about1.html"><img src="../鲜花网站/花/玫瑰.jpg" />
+                                <h4>玫瑰</h4><span class="date">2020-05-05</span>
+                            </a></li>
+                        <li><a href="about1.html"><img src="../鲜花网站/花/百合1.jpg" />
+                                <h4>百合</h4><span class="date">2020-05-05</span>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <a href="secret.html" class="more">MORE+</a>
+                    <ul class="clearfix">
+                        <li><a href="secret.html"><img src="../鲜花网站/花/永生花1.jpg" />
+                                <h4>满月艺术</h4><span class="date">2020-05-20</span>
+                            </a></li>
+                        <li><a href="secret.html"><img src="../鲜花网站/花/永生花2.jpg" />
+                                <h4>一生一世</h4><span class="date">2020-05-20</span>
+                            </a></li>
+                        <li><a href="secret.html"><img src="../鲜花网站/花/永生花3.jpg" />
+                                <h4>花好月圆</h4><span class="date">2020-05-20</span>
+                            </a></li>
+                        <li><a href="secret.html"><img src="../鲜花网站/花/永生花4.jpg" />
+                                <h4>如此爱你，口红</h4><span class="date">2020-05-20</span>
+                            </a></li>
+                        <li><a href="secret.html"><img src="../鲜花网站/花/永生花5.jpg" />
+                                <h4>彩虹约定</h4><span class="date">2020-05-20</span>
+                            </a></li>
+                        <li><a href="secret.html"><img src="../鲜花网站/花/永生花6.jpg" />
+                                <h4>一路有你</h4><span class="date">2020-05-20</span>
+                            </a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="right_box">
+            <!--notice-->
+            <div class="notice">
+                <div class="n_title">
+                    <b></b>
+                    <a href="/">限时活动</a>
+                </div>
+                <div class="bd">
+                    <ul class="infoList">
+                        <li><a href="nDetail.html">520节日优惠</a><span class="date">2020-05-20</span></li>
+                        <li><a href="nDetail.html">持续更新中</a><span class="date">2020-05-20</span></li>
+                        <li><a href="nDetail.html">优惠大升级</a><span class="date">2020-05-20</span></li>
+                        <li><a href="nDetail.html">限时包邮中</a><span class="date">2020-05-20</span></li>
+                        <li><a href="nDetail.html">大热点</a><span class="date">2020-05-20</span></li>
+                        <li><a href="nDetail.html">抢购中</a><span class="date">2020-05-20</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!--code-->
+            <div class="code">
+                <img src="../鲜花网站/花/download.jpg" />
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="friend_link">
+            <b>友情链接：</b><a href="" target="_blank">鄂州物流</a><a href="" target="_blank">鄂州火车站</a>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="footer_wrap">
+        <div class="line"></div>
+        <div class="footer">
+            <div class="f_left">
+                <img src="../鲜花网站/联系.jpg" class="f_logo" />
+                <div class="contact">
+                    <p><a href="contact.html">联系我们</a><a href="javascrip:void(0);">站长统计</a></p>
+                    <p>湖北鄂州&nbsp;&nbsp;&nbsp;&nbsp;所在地址：湖北省鄂州市凤凰路77号</p>
+                    <p>版权所有： 鄂州职业大学计算机系&nbsp;&nbsp;&nbsp;&nbsp;电话：029-8888888&nbsp;&nbsp;&nbsp;&nbsp;<a
+                            href="index.html" target="_blank">鲜花网入口</a></p>
+                </div>
+            </div>
+            <div class="f_right">
+                <p><a href="" style="text-decoration: underline;">鲜花官网入口</a></p>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/11.js"></script>
+<script type="text/javascript">
+    //banner滚动效果
+    jQuery(".banner").slide({ titCell: ".hd ul", mainCell: ".bd ul", effect: "fold", autoPlay: true, autoPage: true, trigger: "click" });
+    //tab切换效果
+    jQuery(".left_tab").slide();
+    //news滚动效果
+    jQuery(".notice").slide({ mainCell: ".bd ul", autoPage: true, effect: "top", autoPlay: true, vis: 3 });
+</script>
+<script>
+
+
+    function over() {
+        img = document.getElementById("img");
+        img.style.display = "block";
+    }
+
+    function out() {
+        img = document.getElementById("img");
+        img.style.display = "none";
+    }
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: aliceblue;
+}
+.headtitle h1 {
+  margin-left: 40%;
+}
+.wapper {
+  margin-top: 20px;
+}
+.main {
+  padding: 20px;
+  border: 1px solid #ccc;
+  position: relative;
+  margin-left: 300px;
+  width: 800px;
+  height: 1200px;
+}
+.main h3,
+h4,
+p {
+  margin-top: 20px;
+}
+.mian-one {
+  padding: 10PX;
+  border: 1px solid #CCC;
+  float: left;
+  width: 300px;
+}
+.mian-two {
+  padding: 10PX;
+  border: 1px solid #CCC;
+  float: right;
+  width: 300px;
+}
+
+.main::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.two {
+  padding: 20px;
+  border: 1px solid #CCC;
+  margin-top: 60px;
+  width: 800px;
+  margin-left: 300px;
+}
+.mian-fuor {
+  margin-top: 60px;
+}
+.mian-fuor ol {
+  margin-left: 20px;
+  margin-top: 30px;
+}

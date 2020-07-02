@@ -1,0 +1,131 @@
+#product_focus {
+	width: 100%;
+	margin-bottom: 10px;
+	padding-bottom: 2px;
+	border-bottom: 2px solid #D50050;
+}
+
+#product_focus .product_title {
+	border-top: 1px solid #CCC;
+	border-bottom: 2px solid #D50050;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	font-size: 18px;
+	text-shadow: 1px 1px 1px #CCC;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#product_focus .l_column {
+	float: left;
+	width: 750px;
+}
+
+#product_focus .l_column .slider {
+	width: 310px;
+	float: left;
+}
+
+.jqzoom {
+	border: 1px solid #ccc;
+	float: left;
+	position: relative;
+	cursor: pointer;
+	width: 308px;
+	height: 225px;
+}
+
+.jqzoom img {
+	float: left;
+	width: 308px;
+	height: 225px;
+}
+
+div.zoomdiv {
+	z-index: 100;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 432px;
+	height: 302px;
+	background: #ffffff;
+	border: 1px solid #ccc;
+	display: none;
+	text-align: center;
+	overflow: hidden;
+}
+
+div.jqZoomPup {
+	width: 50px;
+	height: 50px;
+	z-index: 10;
+	visibility: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border: 1px solid #f6a100;
+	background-color: #fffee6;
+	opacity: 0.4;
+	-moz-opacity: 0.4;
+	-khtml-opacity: 0.4;
+	filter: alpha(Opacity=40);
+}
+
+
+/*图片展示框*/
+
+#product_focus .l_column .slider ul {
+	width: 100%;
+	height: 64px;
+	background: url(../images/bg_sl.gif) no-repeat;
+	margin-top: 6px;
+	_margin-top: 4px;
+}
+
+#product_focus .l_column .slider li {
+	margin: 2px 0 0 11px;
+}
+
+#product_focus .l_column .slider li .img {
+	width: 60px;
+	height: 45px;
+	border: 1px solid #d9d9d9;
+	margin: 7px 0 0 1px;
+	text-align: center;
+	overflow: hidden;
+}
+
+#product_focus .l_column .slider li .img img {
+	vertical-align: middle;
+	height: 45px;
+}
+
+
+#product_focus .l_column .slider li.selected {
+	background: url(../images/common/selet.gif) no-repeat
+}
+
+#product_focus .l_column .slider li.selected .img {
+	border: 1px solid #979696;
+}
+
+#product_focus .l_column .slider ul:after {
+	content: '';
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+#product_focus .l_column .slider .btn {
+	text-align: center;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+#product_focus .l_column .slider .btn img {
+	width: 100px;
+	height: 24px;
+}
+

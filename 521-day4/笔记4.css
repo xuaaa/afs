@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.clearfix ::after {
+  content: "";
+  display: bolck;
+  clear: both;
+}
+em {
+  font-style: normal;
+  color: #ff0000;
+}
+
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  list-style: none;
+  color: #000;
+}
+/* 标题 */
+.toptitle {
+  margin-left: 700px;
+}
+/* 导航 */
+.top {
+  height: 60px;
+  width: 1400px;
+  margin-left: 80px;
+  margin-top: 20px;
+  background-color: #ccc;
+}
+.top ul {
+  float: left;
+  color: #000;
+}
+.top ul li {
+  float: left;
+  line-height: 60px;
+  margin-left: 200px;
+}
+.top ul li:hover {
+  background-color: cornflowerblue;
+  padding: 0 10px 50px;
+  color: #fff;
+}
+/* 外层 */
+.layer {
+  margin-top: 80px;
+  margin-left: 200px;
+  width: 1200px;
+  height: 400px;
+  background-color: #f7f1f1;
+}
+/* 浏览器组成 */
+.browsergrop {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.browsergrop h2 {
+  margin-left: -40px;
+}
+.browsergrop h3 {
+  margin-top: 15px;
+  font-size: 25px;
+}
+.browsergrop p {
+  margin-left: 60px;
+  margin-top: 30px;
+}
+/* js简介 */
+.js-introduction {
+  overflow: hidden;
+  width: 1200px;
+  height: 900px;
+  background-color: bisque;
+  margin-top: 80px;
+  margin-left: 200px;
+}
+.js-jj {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 60px;
+}
+.js-jj h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.js-jj p {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.by .bytltle {
+  font-size: 25px;
+}
+.js-main {
+  overflow: hidden;
+  margin-top: 450px;
+  margin-left: 60px;
+}
+.js-main h2 {
+  margin: 10px;
+}
+.js-main p {
+  margin-left: 150px;
+  margin-top: 50px;
+}
+/* 引入js */
+.importjs {
+  margin-top: 100px;
+  margin-left: 200px;
+  width: 1200px;
+  height: 2000px;
+  background-color: rgba(202, 195, 195, 0.2);
+}
+.importjs h2 {
+  margin-top: 30px;
+  margin-left: 60px;
+}
+.importjs h4 {
+  margin-left: 90px;
+  margin-top: 50px;
+}
+.ym p {
+  margin-left: 120px;
+  margin-top: 30px;
+}
+/* js命名 */
+.jsnamed h2,
+h3 {
+  margin-top: 40px;
+  margin-left: 100px;
+}
+.jsnamed h4 {
+  margin-left: 120px;
+}
+.jsnamed p {
+  margin-top: 30px;
+  margin-left: 160px;
+}
+.jsnamedrull .rull {
+  margin-top: 30px;
+  height: 70px;
+  margin-left: 170px;
+}
+.rull li {
+  margin-top: 10px;
+}
+/* 运算符 */
+.operation {
+  width: 1200px;
+  height: 500px;
+  margin-top: 200px;
+  margin-left: 200px;
+  background-color: rgba(188, 231, 217, 0.2);
+}
+
+.ltation {
+  float: left;
+  width: 600px;
+  height: 300px;
+  background-color: rgba(200, 243, 243, 0.3);
+}
+.ltation h2,
+.ltation h3,
+p {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.ration {
+  float: right;
+  width: 600px;
+  height: 300px;
+  background-color: rgba(250, 225, 193, 0.3);
+}
+.ration h3 {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+/* 悬浮导航 */
+.fix {
+  position: fixed;
+  width: 60px;
+  height: 300px;
+  background-color: #f40;
+  top: 20%;
+  left: 95%;
+  color: #fff;
+}
+.fix li {
+  height: 40px;
+  margin-top: 17px;
+  text-align: center;
+  line-height: 40px;
+}
+.fix a {
+  color: #fff;
+}
+.fix li:hover {
+  padding-left: 10px;
+  background-color: #ff0000;
+}

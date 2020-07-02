@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>note10</title>
+    <link rel="stylesheet" type="text/css" href="../css/nav.css">
+    <link rel="stylesheet" type="text/css" href="note10.css">
+</head>
+
+<body>
+    <!-- title -->
+    <div class="title">
+        <h1>第十天笔记</h1>
+    </div>
+    <!-- main -->
+    <div class="wapper">
+        <div class="main">
+            <h2>对象</h2>
+            <h3>object功能：</h3>
+            <ol>
+                <li>
+                    增：属性名.wife="";
+                </li>
+                <li>删：delete</li>
+                <li>改：名.值="";</li>
+                <li>查:consloe.log();
+                </li>
+            </ol>
+        </div>
+        <div class="main-one">
+            <h3>对象的创建</h3>
+            <h5>1. var&nbsp;&nbsp;obj&nbsp;&nbsp;=&nbsp;&nbsp;{}(plainObject 对象字面量/对象直接量)</h5>
+            <h5>2.构造函数</h5>
+            <p>（1）.系统自带的构造函数 new&nbsp;&nbsp;Object()</p>
+            <p>
+                自定义
+            </p>
+            <p>构造函数为规范书写，每个单词首字母大写</p>
+            <p>function&nbsp;&nbsp;Person(){}</p>
+            <p>var&nbsp;&nbsp; person&nbsp;&nbsp;=&nbsp;&nbsp;new&nbsp;&nbsp;Person();</p>
+            <P>例</P>
+            <p>function &nbsp;&nbsp;Car(){</p>
+            <p>this.name&nbsp;&nbsp;="bmw"</p>
+            <p>
+                this.height&nbsp;&nbsp;=&nbsp;&nbsp;"1440"
+            </p>
+            <p>}</p>
+            <p>var&nbsp;&nbsp; car=&nbsp;&nbsp;new&nbsp;&nbsp;Car();</p>
+            <h3>构造函数内部原理：</h3>
+            <ol>
+                <li>在函数体最前面隐式加上this.={}</li>
+                <li>执行this.xxx=xxx；</li>
+                <li>隐式的返回this
+                </li>
+            </ol>
+        </div>
+        <div class="main-two">
+            <h2>包装类</h2>
+            <h5>js中提供了三种特殊的引用类型（String Number Boolean）每
+                当我们给原始值赋属性值时 后台都会给我们偷偷转换 调用包装类</h5>
+            <h4>怎么进行“包装”(注释的部分就是后台为我们偷偷干的事)</h4>
+            <p> var str="hello word";</p>
+            <p> //var str = new String("hello world"); // 1.创建出一个和基本类型值相同的对象</p>
+            <p> //var long = str.length; // 2.这个对象就可以调用包装对象下的方法，并且返回结给long变量</p>
+            <p> //str = null; // 3.之后这个临时创建的对象就被销毁了</p>
+
+            <p> var long=str.length; //因为str没有length属性 所以执行这步之前后台会自动执行以上三步操作</p>
+            <p> console.log(long); // （结果为:10）</p>
+
+            <p> //var str = new String("hello word"); // 1.因为下面有输出创建出str.length 而str不应该具有length这个属性
+                所以再次开辟空间创建出一个和基本类型值相同的对象</p>
+            <p> //str.length=nudefined; // 2.因为包装对象下面没有length这个属性没有值，所以值是未定</p>
+            <p> //str = null; // 3.这个对象又被销毁了</p>
+
+            <p> console.log(str.length) // （结果为:undefined）</p>
+            <h3>给基本类型添加属性和方法：</h3>
+            <p> //给字符串添加方法 要写到对应的包装对象的原型下才行</p>
+            <p> var str= "hello world";</p>
+            <p> //若我们想在原型上设置一个属性long 保存字符串的长度</p>
+            <p> //var str = new String("hello world");// 1.找到基本包装对象，创建一个和字符串值相同的对象，</p>
+            <p> //String.prototyp
+
+                long=str.length; // 2.通过这个对象找到了包装对象下的方法并调用 </p>
+            <p> //str=null; // 3.这个刚创建的对象被销毁</p>
+            <p> String.prototype.long=str.length;// 执行到这一句，同样因为没有length属性 后台会偷偷的执行上述三步操作</p>
+            <p> console.log(str.long); //结果为：11</p>
+            <p> var str= "hello world";</p>
+            <p> var str2="哈哈 我的长度也为11吗？";</p>
+            <p> String.prototype.long=str.length;</p>
+            <p> console.log(str2.long); //结果为：11</p>
+        </div>
+    </div>
+      <!-- nav -->
+      <div class="fixnav">
+        <div class="fixnav-wapper">
+            <div class="fixtit">
+                <h3 class="fixtitle">学习笔记</h3>
+            </div>
+            <ul>
+                <li><a href="../521-day1/笔记.html">第一天</a></li>
+                <li><a href="../521-day2/笔记2.HTML">第二天</a></li>
+                <li><a href="../521-day3/笔记3.html">第三天</a></li>
+                <li><a href="../521-day4/笔记4.html">第四天</a></li>
+                <li><a href="../521-day5/note5.html">第五天</a></li>
+                <li><a href="../521-day6/note6.html">第六天</a></li>
+                <li><a href="../521-day7/note7.html">第七天</a></li>
+                <li><a href="../521-day8/note8.html">第八天</a></li>
+                <li><a href="../521-day9/note9.html">第九天</a></li>
+                <li><a href="../521-day10/note10.html">第十天</a></li>
+                <li><a href="../521-day11/note11.html">第十一天</a></li>
+                <li><a href="../521-day12/note12.html">第十二天</a></li>
+                <li><a href="../521-day13/note13.html">第十三天</a></li>
+                <li><a href="../521-day14/note14.html">第十四天</a></li>
+                <li><a href="../521-day15/note15.html">第十五天</a></li>
+                <li><a href="../521-day16/note16.html">第十六天</a></li>
+
+                <li><a href="../521-day17/note17.html">第十七天</a></li>
+                <li><a href="../521-day18/note18.html">第十八天</a></li>
+                <li><a href="../521-day19/note19.html">第十九天</a></li>
+                <li><a href="../521-day20/note20.html">第二十天</a></li>
+                <li><a href="../521-day21/note21.html">第二十一天</a></li>
+                <li><a href="../521-day22/note22.html">第二十二天</a></li>
+
+            </ul>
+        </div>
+</body>
+
+</html>

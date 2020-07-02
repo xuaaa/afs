@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>note17</title>
+    <link rel="stylesheet" type="text/css" href="note17.css">
+    <link rel="stylesheet" type="text/css" href="../css/nav.css" />
+</head>
+
+<body>
+    <!-- title -->
+    <div class="title">
+        <div class="tit">
+            <h1>第十七天笔记</h1>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="wapper">
+        <div class="main">
+            <div class="top1">
+                <h2>DOM</h2>
+                <p>1.DOM--->Document Object Model</p>
+                <p>2.DOM定义了表示和修改文档所需要的方法。DOM对象即为宿主对象，由浏览器厂商定义，用来操作
+                    html和xml功能的一类对象集合，也有人称DOM是对html以及xml的标准编程接口。
+                </p>
+            </div>
+            <div class="mian2">
+                <h2>DOM基本操作</h2>
+                <p>1.d对节点的增删查看。</p>
+                <p class="缩进">查看元素节点</p>
+                <ol>
+                    <li>1.document:代表整个文档。</li>
+                    <li>2.document.getElementById()//元素id在ie8以下的浏览器，不区分id大小写，匹配name属性的元素。</li>
+                    <li>3.document.getElementsByTagName()//标签名</li>
+                    <li>4.document.getElementsByName()//需注意只有部分标签name可生效。（表单，表单元素，img，ifame）</li>
+                    <li>5.document.getElementsByClassName()//类名-->ie8和ie8以下的ie版本没有</li>
+                    <li>6.document.querySelector()//css选择器。ie6和ie7没有，不是实时。</li>
+                    <li>7.document.querySelectorAll()//css选择器。ie6和ie7没有，不是实时。</li>
+                </ol>
+            </div>
+            <!--遍历节点树  -->
+            <div class="bianlithree">
+                <h2>遍历节点树((都为属性) 兼容性好 但是会选出来文本或者注释)：</h2>
+                <ol>
+                    <li>1.ParentName-->父节点（最顶端的ParentName为#document）</li>
+                    <li>2.ChildNodes-->子节点们。</li>
+                    <li>3.fristChild-->第一个子节点</li>
+                    <li>4.lastChild-->最后一个子节点</li>
+                    <li>5.nextSibling/PreviousSibling-->后一个兄弟节点/前一个兄弟节点</li>
+                </ol>
+                <h2>基于元素节点树的遍历((都为属性) 不兼容都为IE9及以下不兼容)：</h2>
+                <ol>
+                    <li>1.ParentElement-->返回当前元素的父元素的节点（ie不兼容）</li>
+                    <li>2.Children-->只返回当前元素的元素子节点</li>
+                    <li>3.node.childElementCount===node.children.length --->当前元素节点的子元素节点的个数
+                    </li>
+                    <li>4.FristElementChild--->返回第一个元素子节点</li>
+                    <li>5.LastElementChild--->返回最后一个子元素节点</li>
+                    <li>6.nextElementSibling/PreviousElementSibling--->返回后一个/前一个兄弟子元素节点
+                    </li>
+                </ol>
+                <h2>节点的四个属性：</h2>
+                <ol>
+                    <li>1.nodeName-->元素标签名，以大写形式表示，只读</li>
+                    <li>2.nodeValue--->text节点或Comment节点的文本内容。可读写，不可更改。</li>
+                    <li>3.nodeType--->只读</li>
+                    <li>4.attributes--->属性节点的集合</li>
+                    <li>节点的一个方法：Node.hasChildNodes();</li>
+                </ol>
+            </div>
+            <div class="dom">
+                <h2>DOM结构树</h2>
+                <p><img src="https://img2020.cnblogs.com/blog/1708982/202004/1708982-20200405191000886-1768397487.png">
+                </p>
+                <p>查找元素：</p>
+                <ol>
+                    <li>1.getElementById() 定义在Document.prototype 上，即Element节点不能访问</li>
+                    <li>2.getElementsByName() 定义在HTMLDocument.prototype上，即非html元素不能使用（例：xml,element）</li>
+                    <li>3.getElementsByTagName() 定义在Document.prototype上，和Element.prototype 兼容性最好</li>
+                    <li>4.HTMLDocument.prototype上定义了常用属性（例如：body,head）分别指向文档中的和标签</li>
+                    <li>5.Document.prototype定义了documentElement属性，指代文档根元素即 标签</li>
+                    <li>6.getElementsByClassName 、querySelectorALl 、querySelector 在Document.prototype 和 Element.prototype
+                        中都有定义。</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- nav -->
+    <div class="fixnav">
+        <div class="fixnav-wapper">
+            <div class="fixtit">
+                <h3 class="fixtitle">学习笔记</h3>
+            </div>
+            <ul>
+                <li><a href="../521-day1/笔记.html">第一天</a></li>
+                <li><a href="../521-day2/笔记2.HTML">第二天</a></li>
+                <li><a href="../521-day3/笔记3.html">第三天</a></li>
+                <li><a href="../521-day4/笔记4.html">第四天</a></li>
+                <li><a href="../521-day5/note5.html">第五天</a></li>
+                <li><a href="../521-day6/note6.html">第六天</a></li>
+                <li><a href="../521-day7/note7.html">第七天</a></li>
+                <li><a href="../521-day8/note8.html">第八天</a></li>
+                <li><a href="../521-day9/note9.html">第九天</a></li>
+                <li><a href="../521-day10/note10.html">第十天</a></li>
+                <li><a href="../521-day11/note11.html">第十一天</a></li>
+                <li><a href="../521-day12/note12.html">第十二天</a></li>
+                <li><a href="../521-day13/note13.html">第十三天</a></li>
+                <li><a href="../521-day14/note14.html">第十四天</a></li>
+                <li><a href="../521-day15/note15.html">第十五天</a></li>
+                <li><a href="../521-day16/note16.html">第十六天</a></li>
+                <li><a href="../521-day17/note17.html">第十七天</a></li>
+                <li><a href="../521-day18/note18.html">第十八天</a></li>
+                <li><a href="../521-day19/note19.html">第十九天</a></li>
+                <li><a href="../521-day20/note20.html">第二十天</a></li>
+                <li><a href="../521-day21/note21.html">第二十一天</a></li>
+                <li><a href="../521-day22/note22.html">第二十二天</a></li>
+
+
+
+            </ul>
+        </div>
+</body>
+
+</html>

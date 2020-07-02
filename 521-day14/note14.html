@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>note14</title>
+    <link rel="stylesheet" type="text/css" href="note14.css">
+</head>
+
+<body>
+    <!-- title0 -->
+    <div class="title">
+        <div class="tit">
+            <h1>第十四天笔记</h1>
+        </div>
+    </div>
+
+    <!-- main -->
+    <div class="wapper">
+        <div class="main">
+            <div class="shuzu">
+                <h2>数组的定义：</h2>
+                <ol>
+                    <li>var arr=[];
+                    </li>
+                    <li>var arr=new Array(括号里若只填一个参数，则表示长度)</li>
+                </ol>
+                <h2>数组的读和写：</h2>
+                <ol>
+                    <li>arr[num]//不可以溢出读（结果是undefined）</li>
+                    <li>arr[num]=xxx;//可以溢出写</li>
+                </ol>
+            </div>
+            <div class="chear">
+                <h2>改变原数组：</h2>
+                <ol>
+                    <li>push:在数组里添加数据，在数组末尾添加。</li>
+                    <li>pop:将最后一位剪切。</li>
+                    <li>unshift：在数组前面加数据。</li>
+                    <li>shift：在数组前面减数据。</li>
+                    <li>reverse：将原数组逆转</li>
+                    <li>splice：arr.splice（从第几位开始，截取多少的长度，在切口处添加新的数据。）</li>
+                    <li>
+                        <p>改变原数组进行排序；（1.必须写两形参。2.看返回值）</p>
+                        <p>1.当返回值为负数时，那么前面的数放在前面</p>
+                        <p>2.当返回值为正数时，那么后面的数放前面。</p>
+                        <p>3.当返回值为0时，不动</p>
+                        <div class="daima">
+                            <span>var.sotr(funnction(a,b){</span>
+                            <span>//return a-b 升序</span>
+                            <span>//return b-a 降序</span>
+                            <span>});</span>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="notc">
+                <h2>不改变原数组：</h2>
+                <ol>
+                    <li>concat(): 用于连接两个或多个数组，仅会返回被连接数组的一个副本，arrayObject.concat(arrayX,arrayX,……,arrayX)</li>
+                    <li> jion(): 返回一个字符串。该字符串是通过把 arrayObject 的每个元素转换为字符串，然后把这些字符串连接起来,arrayObject.join(separator</li>
+                    <li> slice(): 如果数组是空的arrayObject.slice(start,end)</li>
+                </ol>
+            </div>
+            <div class="other">
+                <ol>
+                    <li>
+                        *toSource()*toSource() 方法表示对象的源代码。
+                        该原始值由 Array 对象派生的所有对象继承。</li>
+                    <li>
+                        toSource() 方法通常由 JavaScript 在后台自动调用，并不显式地出现在代码中。object.toSource()</li>
+                    <li>
+                        toString(): arrayObject 的字符串表示。返回值与没有参数的 join() 方法返回的字符串相同arrayObject.toString()</li>
+                    <li>
+                        toLocaleString(): 把数组转换为本地字符串。arrayObject.toLocaleString()</li>
+                    valueOf()： valueOf() 方法返回 Array 对象的原始值。
+                    <li>
+                        该原始值由 Array 对象派生的所有对象继承。</li>
+                    arrayObject.valueOf()
+                </ol>
+            </div>
+            <div class="leishuzu">
+                <h2>类数组</h2>
+                <div class="daima">
+                <span>var obj={</span>
+                    <span class="suojin">"0"='a'</span>
+                    <span class="suojin">"1"='b'</span>
+                    <span class="suojin">"2"='c'</span>
+                    <span class="suojin">"length"='3'</span>
+                    <span class="suojin">"push"=Array.prototype.push</span>
+                    <span class="suojin">"splice"=Array.prototype.push</span>
+                    <span>}</span>
+                    <span>//属性要为索引（数字）属性，必须有length属性，最好加上push</span>
+                    <span>//好处</span>
+                    <span>Array.prototype.push=function（target）{</span>
+                        <span class="suojin">obj[obj.length]=target;</span>
+                        <span class="suojin">obj.length++;</span>
+                        <span>}</span>
+                </div>
+            </div>
+            <div class="type">
+                <h2>封装type</h2>
+                <ol>
+                    <li>typeof([])--array</li>
+                    <li>typeof({})--object</li>
+                    <li>typeof(function)--object</li>
+                    <li>typeof(new Number())--number object</li>
+                    <li>typeof(123)--number</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- nav -->
+    <div class="fixnav">
+        <div class="fixnav-wapper">
+            <div class="fixtit">
+                <h3 class="fixtitle">学习笔记</h3>
+            </div>
+            <ul>
+                <li><a href="../521-day1/笔记.html">第一天</a></li>
+                <li><a href="../521-day2/笔记2.HTML">第二天</a></li>
+                <li><a href="../521-day3/笔记3.html">第三天</a></li>
+                <li><a href="../521-day4/笔记4.html">第四天</a></li>
+                <li><a href="../521-day5/note5.html">第五天</a></li>
+                <li><a href="../521-day6/note6.html">第六天</a></li>
+                <li><a href="../521-day7/note7.html">第七天</a></li>
+                <li><a href="../521-day8/note8.html">第八天</a></li>
+                <li><a href="../521-day9/note9.html">第九天</a></li>
+                <li><a href="../521-day10/note10.html">第十天</a></li>
+                <li><a href="../521-day11/note11.html">第十一天</a></li>
+                <li><a href="../521-day12/note12.html">第十二天</a></li>
+                <li><a href="../521-day13/note13.html">第十三天</a></li>
+                <li><a href="../521-day14/note14.html">第十四天</a></li>
+                <li><a href="../521-day15/note15.html">第十五天</a></li>
+                <li><a href="../521-day16/note16.html">第十六天</a></li>
+
+                <li><a href="../521-day17/note17.html">第十七天</a></li>
+                <li><a href="../521-day18/note18.html">第十八天</a></li>
+                <li><a href="../521-day19/note19.html">第十九天</a></li>
+                <li><a href="../521-day20/note20.html">第二十天</a></li>
+                <li><a href="../521-day21/note21.html">第二十一天</a></li>
+                <li><a href="../521-day22/note22.html">第二十二天</a></li>
+
+            </ul>
+        </div>
+</body>
+
+</html>

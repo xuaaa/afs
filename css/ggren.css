@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.navtop li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+.top {
+  position: relative;
+  height: 200px;
+  background-color: rgba(39, 188, 233, 0.5);
+}
+.top1 h1 {
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 50px;
+  display: block;
+  transition: 1s;
+}
+.top1 h4 {
+	background-color: aqua;
+  display: block;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 200px;
+  transition: 2s;
+}
+.top h1:hover {
+  cursor: pointer;
+  color: #fff;
+  transform: rotate(30deg);
+  
+}
+.top h4:hover {
+	color: #f00;
+	cursor: pointer;
+  transform: translate3d(210px, 0px, 10px);
+}
+/* nav */
+.navtop {
+  height: 50px;
+  background-color: antiquewhite;
+}
+.yiji > li {
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+  margin-left: 10px;
+  background-color: #d0e69c;
+}
+.yiji a {
+  color: #000;
+}
+.erji li {
+  height: 0px;
+  background-color: #dcecb5;
+  margin-bottom: 3px;
+  overflow: hidden;
+  transition: 1s;
+}
+.yiji li:hover .erji li {
+  height: 50px;
+}
+.yiji li:hover a {
+  color: #f00;
+}
+/* main */
+/* 轮播 */
+.swiper-container {
+  margin-top: 50px;
+  border: 2px solid #ccc;
+  width: 800px;
+  height: 400px;
+  margin-left: auto;
+}
+.swiper-container img {
+  width: 800px;
+  height: 400px;
+}
+.main {
+  padding: 20px;
+  width: 900px;
+  border: 1px solid #ccc;
+  margin-left: 20%;
+  margin-top: 30px;
+}
+/* 公告 */
+.fl {
+  width: 200px;
+  margin-top: -200px;
+  float: right;
+  margin-right: 50px;
+  /* margin-top: -1400px; */
+}
+.topgg {
+  padding: 10px;
+  background-color: burlywood;
+}
+.bottomneirong {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.bottomneirong span {
+  margin-top: 10px;
+  display: block;
+}
+/*  */
+.wapper span {
+  display: block;
+}
+.daima {
+  width: 95%;
+  color: #000;
+  background-color: #f6f4f0;
+  background-color: #d0e69c;
+  background-color: #dcecb5;
+  background-color: #e5eecc;
+  margin: 20px 0 5px 10px;
+  padding: 5px;
+  border: 1px solid #d4d4d4;
+  background-image: -webkit-linear-gradient(#fff, #e5eecc 100px);
+  background-image: linear-gradient(#fff, #e5eecc 100px);
+}
+h2 {
+  margin-top: 20px;
+}
+
+.suojin {
+  text-indent: 2em;
+}
+.suojin3 {
+  text-indent: 3em;
+}
+.suojin4 {
+  text-indent: 4em;
+}

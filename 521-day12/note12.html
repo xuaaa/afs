@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>note12</title>
+    <link rel="stylesheet" type="text/css" href="note12.css">
+    <link rel="stylesheet" type="text/css" href="../css/nav.css">
+</head>
+
+<body>
+    <!-- title -->
+    <div class="title">
+        <div class="tit">
+            <h1>第十二天笔记</h1>
+        </div>
+        <!--main  -->
+        <div class="wapper">
+            <div class="main">
+                <div class="jicehng">
+                    <h2>继承发展式</h2>
+                    <ol type="1">
+                        <li>传统形式，原型链。（过多继承没用的属性）
+                        </li>
+                        <li>借用构造函数；
+                            <p>不能继承借用构造函数的原型</p>
+                            <p>每次构造函数都要多走一个函数</p>
+                        </li>
+                        <li>共享原型
+                            <p>不能随便改动自己的原型</p>
+                            <div class="daima">
+                                <p>Father.prototype.LastName&nbsp;&nbsp;=&nbsp;&nbsp;"deng"</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;&nbsp;Father（）{</p>
+                                <p>&nbsp;&nbsp;}</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;&nbsp;son(){</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                                <p>&nbsp;&nbsp;function&nbsp;&nbsp;inherit(Target,Origin){</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;Target.prototype&nbsp;&nbsp;=&nbsp;&nbsp;Origin.prototype;
+                                </p>
+                                <p>&nbsp;&nbsp;}</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;inhert&nbsp;&nbsp;&nbsp;(Son,Father);</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;Son.prototype.sex&nbsp;&nbsp;=&nbsp;&nbsp;"maale"</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;&nbsp;son&nbsp;&nbsp;=&nbsp;&nbsp;new&nbsp;&nbsp;Son
+                                </p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;&nbsp;father&nbsp;&nbsp;=&nbsp;&nbsp;new&nbsp;&nbsp;Father
+                                </p>
+                            </div>
+                        </li>
+                        <li>圣杯模式
+                            <div class="daima">
+                                <p>function&nbsp;&nbsp;inherit(Target,Origin){</p>
+                                <p>&nbsp;&nbsp;function&nbsp;&nbsp;F()&nbsp;&nbsp;{}</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F.prototype&nbsp;&nbsp;=&nbsp;&nbsp;Origin.prototype;
+                                </p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;Target.prototype&nbsp;&nbsp;=&nbsp;&nbsp;new&nbsp;&nbsp;F();
+                                </p>
+                                <p>&nbsp;&nbsp;Target.proytotype.coonstuctor&nbsp;&nbsp;=&nbsp;&nbsp;Target;</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;Target.prototype.uber&nbsp;&nbsp;=&nbsp;&nbsp;Origin.prototype;
+                                </p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;Father.prototype.lastName&nbsp;&nbsp;=&nbsp;&nbsp;"deng";</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;&nbsp;Father(){</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;&nbspSon(){ </p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;inherit(Son,Father);</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;&nbsp;father&nbsp;&nbsp;=&nbsp;&nbsp;new&nbsp;&nbsp;Father();
+                                </p>
+                                <p></p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="shuxing">
+                    <h2>属性访问:[]适用于属性拼接</h2>
+                    <div class="daima">
+                        var&nbsp;&nbsp;deng&nbsp;&nbsp;={<br>
+                        &nbsp;&nbsp;wife1:{name:"xiaoliu"}<br>
+                        &nbsp;&nbsp;wife2:{name:"xiaozhang"}<br>
+                        &nbsp;&nbsp; wife3:{name:"xiaomeng"}<br>
+                        &nbsp;&nbsp; wife4:{name:"xiaowang"}<br>
+                        &nbsp;&nbsp; Saywife:function(nunm){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; return&nbsp;this["wife"+num];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; }<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp; }
+                    </div>
+                </div>
+                <div class="duixa">
+                    <h2>对象的枚举：</h2>
+                    <h4>for&nbsp;&nbsp;循环</h4>
+                    <div class="daima">
+                        var&nbsp;&nbsp;obj&nbsp;&nbsp;={<br>
+                        &nbsp;&nbsp;name&nbsp;&nbsp;:&nbsp;&nbsp;"xioazhang";<br>
+                        &nbsp;&nbsp;age&nbsp;&nbsp;:&nbsp;&nbsp;"25";<br>
+                        &nbsp;&nbsp;sex&nbsp;&nbsp;:&nbsp;&nbsp;"man";<br>
+                        &nbsp;&nbsp; height&nbsp;&nbsp;:&nbsp;&nbsp;"180";<br>
+                        &nbsp;&nbsp; wight&nbsp;&nbsp;:&nbsp;&nbsp;"75";<br>
+                        &nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp; console.log(prop+"&nbsp;&nbsp;"+typeof(prop));<br>
+
+                        }
+                    </div>
+                    <h4>hasOwProperty:过滤，看属性是否为自己的</h4>
+                    <div class="daima">
+                        var&nbsp;&nbsp;obj&nbsp;&nbsp;={<br>
+                        &nbsp;&nbsp;name&nbsp;&nbsp:&nbsp;&nbsp;'15';<br>
+                        &nbsp;&nbsp;age&nbsp;&nbsp;:&nbsp;&nbsp;'18';<br>
+                        &nbsp;&nbsp;sex&nbsp;&nbsp;:&nbsp;&nbsp;"man";<br>
+                        &nbsp;&nbsp;height&nbsp;&nbsp;:&nbsp;&nbsp;'180';<br>
+                        &nbsp;&nbsp;weight&nbsp;&nbsp;:&nbsp;&nbsp;"75";<br>
+                        _proto_:{<br>
+                        &nbsp;&nbsp;lastName&nbsp;&nbsp;:&nbsp;&nbsp;"deng";<br>
+                        }<br>
+                        }<br>
+                        for(var&nbsp;&nbsp;prop&nbsp;&nbsp;in&nbsp;&nbsp;obj){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;if(obj.hasOWProperty(prop)){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(obj,[prop]);<br>
+                        }<br>
+                        }
+                    </div>
+                    <h4>in(跟hasowproprety一样)</h4>
+                    <h4>instanceof</h4>
+                    <div class="daima">
+                        function&nbsp;&nbsp;Person(){<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;&nbsp;person&nbsp;&nbsp;=&nbsp;&nbsp;new&nbsp;&nbsp;Person();<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;&nbsp;obj&nbsp;&nbsp;={}<br>
+                        //A对象是不是B构造函数构造出来的<br>
+                        //kanA对象的原型链上有没有B的原型<br>
+                        A&nbsp;&nbsp;instanceof&nbsp;&nbsp;B <br>
+                        &nbsp;&nbsp;var&nbsp;&nbsp;arr&nbsp;&nbsp;=&nbsp;&nbsp;{}
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- nav -->
+    <div class="fixnav">
+        <div class="fixnav-wapper">
+            <div class="fixtit">
+                <h3 class="fixtitle">学习笔记</h3>
+            </div>
+            <ul>
+                <li><a href="../521-day1/笔记.html">第一天</a></li>
+                <li><a href="../521-day2/笔记2.HTML">第二天</a></li>
+                <li><a href="../521-day3/笔记3.html">第三天</a></li>
+                <li><a href="../521-day4/笔记4.html">第四天</a></li>
+                <li><a href="../521-day5/note5.html">第五天</a></li>
+                <li><a href="../521-day6/note6.html">第六天</a></li>
+                <li><a href="../521-day7/note7.html">第七天</a></li>
+                <li><a href="../521-day8/note8.html">第八天</a></li>
+                <li><a href="../521-day9/note9.html">第九天</a></li>
+                <li><a href="../521-day10/note10.html">第十天</a></li>
+                <li><a href="../521-day11/note11.html">第十一天</a></li>
+                <li><a href="../521-day12/note12.html">第十二天</a></li>
+                <li><a href="../521-day13/note13.html">第十三天</a></li>
+                <li><a href="../521-day14/note14.html">第十四天</a></li>
+                <li><a href="../521-day15/note15.html">第十五天</a></li>
+                <li><a href="../521-day16/note16.html">第十六天</a></li>
+
+                <li><a href="../521-day17/note17.html">第十七天</a></li>
+                <li><a href="../521-day18/note18.html">第十八天</a></li>
+                <li><a href="../521-day19/note19.html">第十九天</a></li>
+                <li><a href="../521-day20/note20.html">第二十天</a></li>
+                <li><a href="../521-day21/note21.html">第二十一天</a></li>
+                <li><a href="../521-day22/note22.html">第二十二天</a></li>
+
+            </ul>
+        </div>
+</body>
+
+</html>

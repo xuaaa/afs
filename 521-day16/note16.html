@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>note16</title>
+    <link rel="stylesheet" type="text/css" href="note16.css">
+</head>
+
+<body>
+    <!-- title -->
+    <div class="title">
+        <div class="tit">
+            <h1>第十六天笔记</h1>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="wapper">
+        <div class="main">
+            <div class="trycatch">
+                <h2>try{}catch</h2>
+                <div class="daima">
+                    <span>try{</span>
+                    <span class="suojin">}catch(e){ alert(e.name+" "+e.message)</span>
+                    <span>}</span>
+                </div>
+                <p>在try里面的代码发生错误，不会执行错误后try里面的代码。但会执行catch的代码，可打印错误。</p>
+            </div>
+            <div class="sixError">
+                <h2>Error.name的六种错误值信息：</h2>
+                <ol>
+                    <li>1.EvalError：eval（）的使用与定义不一致</li>
+                    <li>2.RangeError：数值越界</li>
+                    <li>3.RefevenceErrror：非法或不能识别的引用的数值。（没定义就使用或调用）</li>
+                    <li>4.SyntaxError：发生语法解析错误</li>
+                    <li>5.TypeError：操作数据类型错误</li>
+                    <li>6.UrlError：Url处理函数使用不当</li>
+                </ol>
+            </div>
+            <div class="es5">
+                <h2>es5严格模式</h2>
+                <h3>什么是严格模式？</h3>
+                <span>现在浏览器都是在 es3.0 和 es5.0 的基础上新增方法使用的，但是es3.0 和 es5.0 产生冲突的部分就是用 es5.0 ，否则用es3.0;
+
+                    那么产生冲突的部分使用的就是es5.0 的严格模式。
+                    严格模式的定义</span>
+                <h3>严格模式定义：</h3>
+                <h4>启用严格模式："use strict";</h4>
+                <h4>两种启用方法：</h4>
+                <h4>1.全局严格模式（写在js页面逻辑最顶端）</h4>
+                <div class="daima">
+                    <span> "use strict";</span>
+                    <span> s = 1;</span>
+                    <span>function demo(){</span>
+                    <span class="suojin"> console.log(s);</span>
+                    <span>}</span>
+                    <span>demo();</span>
+                    <span>//会报错 ：a is not definded </span>
+                </div>
+                <h4>2、局部函数内严格模式（推荐）</h4>
+                <div class="daima">
+                    <span>function test(){</span>
+                    <span class="suojin"> "use strict";</span>
+                    <span class="suojin">a = 1;</span>
+                    <span class="suokjin"> console.log(a);</span>
+                    <span>}</span>
+                    <span>function demo(){</span>
+                    <span class="suojin">b = 2;</span>
+                    <span class="suojin">console.log(b);</span>
+                    <span>}</span>
+                    <span>test();</span>
+                    <span>demo();</span>
+                    <span>//会报错 : a is not definded 因为在test函数里面严格模式a未定义会报错；在语法分析的时候就已经发生错误，所以代码不被执行</span>
+                    <h4>用字符串来启用原因： 就是一行字符串，不会对不兼容严格模式的浏览器产生影响（向后兼容） </h4>
+                </div>
+                <div class="notdo">
+                    <h4>严格模式不支持的类型</h4>
+                    <h5>1.不支持with</h5>
+                    <p><em>with</em>:可以改变作用域链，它可以让with指向的对象变成with所包围内容作用域链的最顶端（AO）</p>
+                    <div class="daima">
+                        <span> // eg：</span>
+                        <span> var obj = {</span>
+                        <span class="suojin"> name : 'obj',</span>
+                        <span> }</span>
+                        <span> var name = 'window';</span>
+                        <span> function test(){</span>
+                        <span class="suojin"> var name = 'scope';</span>
+                        <span class="suojin"> with(obj){</span>
+                        <span class="suojin3"> console.log(name); //-----obj称为此部分最直接的执行期上下文AO</span>
+                        <span class="suojin"> }</span>
+                        <span> }</span>
+                        <span> test();</span>
+                        <span> 执行顺序：// AO --->JO</span>
+                        <span> // obj ---> test ---> var name</span>
+                    </div>
+                    <p>with 也可以实现简化代码 实现真正的命名空间</p>
+                    <div class="daima">
+                        <span> // eg: </span>
+                        <span> var org ={</span>
+                        <span class="suojin"> dp1 :{</span>
+                        <span class="suojin"> jc : {</span>
+                        <span class="suojin3"> name : 'abc',</span>
+                        <span class="suojin3"> age : 123,</span>
+                        <span> },</span>
+                        <span class="suojin3"> deng : {</span>
+                        <span class="suojin3"> name : 'bcd',</span>
+                        <span class="suojin3"> age : 345,</span>
+                        <span> }</span>
+                        <span class="suojin"> },</span>
+                        <span class="suojin"> dp2 : {</span>
+                        <span class="suojin3"> xiaowang : {</span>
+                        <span class="suojin3"> name : 'wer',</span>
+                        <span class="suojin3"> age : 29,</span>
+                        <span> },</span>
+                        <span> xiaoli : {</span>
+                        <span class="suojin3"> name : 'her',</span>
+                        <span class="suojin3"> age : 20,</span>
+                        <span class="suojin">},</span>
+                        <span> }</span>
+                        <span> }</span>
+                        //当我们用with访问对象里面的属性,以达到代码简化的目的</span>
+                        with(org.dp1.jc){</span>
+                        console.log(name);</span>
+                        }</span>
+                        //输出结果：abc</span>
+                        with(org.dp1.deng){</span>
+                        console.log(name);</span>
+                        }</span>
+                        //输出结果：bcd</span>
+                    </div>
+                    <p>用with来实现document.write('a');</p>
+                    <div class="daima"></span>
+                        <span> with(document){</span>
+                        <span class="suojin"> write('a');</span>
+                        <span> }</span>
+                        <span> 相当于document.write('a');</span>
+                    </div>
+                    <p><em> 但是with太强大了，当代码层级太多的话，with改变作用域链，导致代码失效率。所以es5.0严格模式不允许用with</em></p>
+                    <ol>
+                        <li>2.在es5.0严格模式下，不能使用arguments.callee, func.caller</li>
+                        <li>3.变量赋值前必须声明;</li>
+                        <li>4.局部this必须被赋值（ Person.call(null/undefined)赋值什么就是什么 ）</li>
+                    </ol>
+                    <div class="thid">this 在es5.0中this预编译过程不在指向window 必须被赋值</div>
+                    <div class="daima">
+                        <span> "use strict";</span>
+                        <span> function test(){</span>
+                        <span class="suojin"> console.log(this);</span>
+                        <span> }</span>
+                        <span> //如果直接调用函数的话</span>
+                        <span> test(); //----打印出undefined</span>
+
+                        <span> //如果构造函数</span>
+                        <span> new test(); // this 指向构造函数test{}</span>
+                    </div>
+                    <p>可以用call来改变this指向</p>
+                    <div class="daima">
+                        <span>test.call(Object.prototype.constructor); //改变this指向</span>
+                    </div>
+                    <p>当call里面放原始值的时候，不在严格的情况下会包装成包装类；但是在严格的情况下，还会打印出原始值。</p>
+                    <div class="daima">
+                        <span>test.call(123);</span>
+                        <span> //严格情况下：123</span>
+                        <span> // 不严格的情况下：包装类</span>
+
+                    </div>
+                    <h5>5.拒绝重复属性和参数</h5>
+                    <p> 在es3.0里面重复的参数不报错； 但在es5.0里面有重复的参数会报错,但有重复的属性不报错</p>
+                    <h5>不能使用 eval("")</h5>
+                    <p> eval("") : 能把字符串当代码来执行</p>
+                    <p>es3.0都不能用eval("");</p>
+                    <p>eval能改变作用域 效果更强大(不同的情况eval改变作用域的强度是不一样的)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- nav -->
+    <div class="fixnav">
+        <div class="fixnav-wapper">
+            <div class="fixtit">
+                <h3 class="fixtitle">学习笔记</h3>
+            </div>
+            <ul>
+                <li><a href="../521-day1/笔记.html">第一天</a></li>
+                <li><a href="../521-day2/笔记2.HTML">第二天</a></li>
+                <li><a href="../521-day3/笔记3.html">第三天</a></li>
+                <li><a href="../521-day4/笔记4.html">第四天</a></li>
+                <li><a href="../521-day5/note5.html">第五天</a></li>
+                <li><a href="../521-day6/note6.html">第六天</a></li>
+                <li><a href="../521-day7/note7.html">第七天</a></li>
+                <li><a href="../521-day8/note8.html">第八天</a></li>
+                <li><a href="../521-day9/note9.html">第九天</a></li>
+                <li><a href="../521-day10/note10.html">第十天</a></li>
+                <li><a href="../521-day11/note11.html">第十一天</a></li>
+                <li><a href="../521-day12/note12.html">第十二天</a></li>
+                <li><a href="../521-day13/note13.html">第十三天</a></li>
+                <li><a href="../521-day14/note14.html">第十四天</a></li>
+                <li><a href="../521-day15/note15.html">第十五天</a></li>
+                <li><a href="../521-day16/note16.html">第十六天</a></li>
+
+                <li><a href="../521-day17/note17.html">第十七天</a></li>
+                <li><a href="../521-day18/note18.html">第十八天</a></li>
+                <li><a href="../521-day19/note19.html">第十九天</a></li>
+                <li><a href="../521-day20/note20.html">第二十天</a></li>
+                <li><a href="../521-day21/note21.html">第二十一天</a></li>
+                <li><a href="../521-day22/note22.html">第二十二天</a></li>
+
+            </ul>
+        </div>
+</body>
+
+</html>

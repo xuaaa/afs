@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wapper ol li{
+    margin-top: 10px;
+    list-style: none;
+}
+.wapper ol li p{
+    margin-left: 40px;
+}
+.wapper ol {
+    margin-top: 20px;
+    padding: 0px 10px 10px 10px;
+ 
+    border: 1px solid #ccc;
+    background-color: rgba(240, 238, 240,.5);
+}
+.title{
+    height: 60px;
+    background-color: rgba(240, 238, 240,.5);
+}
+.tit{
+    margin-left: 35%;
+    line-height: 60px;
+}
+.main{
+    margin-top: 20px;
+    width: 800px;
+    margin-left: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.main h2,.main h4{
+margin-top: 50px;
+}
+
+.wapper p{
+    margin-top: 20px;
+}
+.main-pageOffset h4{
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+.main-pageOffset p{
+    margin-left: 60px;
+}
+
+.main-offset{
+    position: relative;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.windowScsroll img{
+    width: 600px;
+}
